@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Atomic+Age&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Kumar+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    cursor: url('./cursor.png'), auto;
+}
 .logo{
     height: 40px;
 }
@@ -10,7 +12,8 @@ nav{
     margin: 20px auto 20px;
     width: 80vw;
     height: 64px;
-    font-family: "Poppins", serif;
+    font-family: "Bona Nova SC", serif;
+    text-transform: uppercase;
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
@@ -24,9 +27,15 @@ nav{
     height: 64px;
     align-items: center;
     justify-content: center;
-    gap: 20px;
     padding-right: 40px;
     list-style: none;
+}
+a:hover{
+    background-color: #1a3971;
+    color: #CADCFC;
+    border: #7f94bb;
+    padding: 15px;
+    border-radius: 24px;
 }
 #connectButton{
     background-color: #1a3971;
@@ -40,6 +49,15 @@ nav{
     margin: 0 auto 2px 0;
     line-height: 26px;
     padding: 9px;
+    font-family: 'Bona Nova SC';
+}
+#connectButton:hover{
+    background-color: rgb(202, 220, 252);
+    color: #1a3971;
+    cursor: pointer;
+}
+.li{
+    width:8rem;
 }
 nav ul li a{
     color: #1a3971;
@@ -50,19 +68,41 @@ nav ul li a{
     height: calc(764.15px - 78.4px);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
-.hero h1{
-    font-family: "Titillium Web", serif;
+.main{
+    width: 40vw;
+}
+.hero h2{
+    font-family: 'Atomic Age', serif;
     font-weight: 725;
     font-size: 50px;
     font-style: normal;
     line-height: 10px;
     color: #1a3971;
 }
+.Token{
+    font-family: 'Kumar One', serif;
+    font-weight: 725;
+    font-size: 120px;
+    font-style: normal;
+    line-height: 10px;
+    color: #1a3971;
+}
+.blinking-cursor {
+    display: inline-block;
+    width: 1px;
+    height: 1em;
+    background-color: #1a3971;
+    animation: blink 0.5s step-end infinite;
+}
+@keyframes blink {
+    50% {
+        background-color: transparent;
+    }
+}
 .hero p{
     color: #1a3971;
-    width: 40%;
 }
 .hero-btn{
     display: flex;
@@ -70,26 +110,38 @@ nav ul li a{
     height: 3em;
     margin: 0 20px;
 }
+.explore:hover{
+    background-color:#CADCFC ;
+    color: #1a3971;
+}
+.create:hover{
+    background-color:#CADCFC ;
+    color: #1a3971;
+}
 .create{
     border: none;
     background-color: #1a3971;
     border-radius: 9px;
     font-size: 15px;
-    width: 5em;
+    width: 7em;
     height: auto;
     color: white;
+    cursor: pointer;
 }
 .explore{
     border: none;
     background-color: #1a3971;
     border-radius: 9px;
     font-size: 15px;
-    width: 5em;
+    width: 7em;
     height: auto;
     color: white;
+    cursor: pointer;
 }
-.image{
-    width: 50px;
+
+.hero img{
+    /* width: 10rem; */
+    height: 35rem;
 }
 .down{
     width: 100vw;
@@ -106,13 +158,12 @@ nav ul li a{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin: auto;
 
 }
-.image2{
-    border: 2px solid black;
-    height: auto;
-    width: 40%;
+.image2 img{
+    margin: auto 20rem auto 10rem;
+    height: 35rem;
 }
 .down h2{
     font-family: "Titillium Web", serif;
@@ -128,6 +179,8 @@ nav ul li a{
     justify-content: center;
     align-items: center;
     color:#1a3971;
+    font-size: x-large;
+    font-weight: 500;
 }
 .features{
     height: 100%;
@@ -135,15 +188,91 @@ nav ul li a{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: radial-gradient(#7f94bb 0.1%,white);
 }
 .bigbox{
-    height: 90vh;
+    height: 190vh;
     width: 75vw;
     margin: auto;
-    background-color:  #1a3971;
+    background-color:  rgb(202, 220, 252);
 }
 .features img{
     width: 75vw;
     margin: auto;
+}
+.cards1{
+    display: flex;
+
+}
+.lsideb{
+    height: 40rem;
+    background-color: #fff;
+    border-radius: 90px;
+    width: 40vw;
+    margin: auto 2px auto 2rem;
+}
+.sidecard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+.rsides1{
+    height: 19.5rem;
+    background-color: #fff;
+    border-radius: 90px;
+    width: 31vw;
+    /* margin: auto 2rem; */
+
+}
+.rsides2{
+    height: 19.5rem;
+    background-color: #fff;
+    border-radius: 90px;
+    width: 31vw;
+    /* margin: auto 2rem; */
+
+}
+.cards2{
+    display: flex;
+
+}
+.rsideb{
+    height: 30rem;
+    background-color: #fff;
+    border-radius: 90px;
+    width: 40vw;
+    margin: 30px 2rem auto 2px;
+}
+.sidecard2{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.lsides1{
+    height: 30rem;
+    background-color: #fff;
+    border-radius: 90px;
+    width: 20vw;
+    margin: 30px 0px auto 2rem;
+    
+}
+.lsides2{
+    height: 30rem;
+    background-color: #fff;
+    border-radius: 90px;
+    width: 20vw;
+    margin: 30px 0px auto;
+    /* margin: auto 2rem; */
+
+}
+.bigbox h2{
+    font-family: "Titillium Web", serif;
+    font-weight: 725;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-style: normal;
+    line-height: 10px;
+    color: rgb(26, 57, 113);
 }

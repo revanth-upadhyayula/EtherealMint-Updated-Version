@@ -5,7 +5,7 @@ const Down_content = () => {
                 <h2>About Ethereum</h2>
                 <div className="downmain">
                     <div className="image2">
-                        <img src="imag2" alt="Image" />
+                        <img src="hero.png" alt="Image" />
                     </div>
                     <div className="para">
                         <p className="text-lg text-gray-700 mb-4">
