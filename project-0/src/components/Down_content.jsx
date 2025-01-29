@@ -2,11 +2,11 @@ const Down_content = () => {
     return (
         <main>
             <section className="down" >
-                <h2>About Ethereum</h2>
+                <div className="he">
+                    <h2 className="h21">What is</h2>
+                    <h2 className="h22">Ethereum</h2>
+                </div>
                 <div className="downmain">
-                    <div className="image2">
-                        <img src="hero.png" alt="Image" />
-                    </div>
                     <div className="para">
                         <p className="text-lg text-gray-700 mb-4">
                             Ethereum is a decentralized blockchain platform that enables developers to build and deploy smart contracts and decentralized applications (DApps). It is powered by Ether (ETH), the native cryptocurrency used for transactions and computational services.
