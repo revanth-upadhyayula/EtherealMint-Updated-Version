@@ -1,19 +1,20 @@
+import {motion} from "framer-motion";
 const Down_content = () => {
     return (
         <main>
             <section className="down" >
                 <div className="he">
-                    <h2 className="h21">What is</h2>
-                    <h2 className="h22">Ethereum</h2>
+                    <motion.h2 initial={{opacity:0,x:-600}} whileInView={{opacity:1,x:0}} transition={{duration: 1,delay:1,ease:"easeOut"}} viewport={{once:true,amount:1}} className="h21">What is</motion.h2>
+                    <motion.h2 initial={{opacity:0,x:-200}} whileInView={{opacity:1,x:0}} transition={{duration: 1,delay:0.5,ease:"easeOut"}} viewport={{once:true}} className="h22">Ethereum</motion.h2>
                 </div>
                 <div className="downmain">
                     <div className="para">
-                        <p className="text-lg text-gray-700 mb-4">
+                        <motion.p initial={{opacity:0,x:600}} whileInView={{opacity:1,x:0}} transition={{duration: 1,delay:1,ease:"easeOut"}} viewport={{once:true}} className="text-lg text-gray-700 mb-4">
                             Ethereum is a decentralized blockchain platform that enables developers to build and deploy smart contracts and decentralized applications (DApps). It is powered by Ether (ETH), the native cryptocurrency used for transactions and computational services.
-                        </p>
-                        <p className="text-lg text-gray-700">
+                        </motion.p>
+                        <motion.p initial={{opacity:0,x:600}} whileInView={{opacity:1,x:0}} transition={{duration: 1,delay:1.5,ease:"easeOut"}} viewport={{once:true}} className="text-lg text-gray-700">
                             With Ethereum, you can create and manage digital assets, execute programmable transactions, and explore a vast ecosystem of innovative blockchain applications.
-                        </p>
+                        </motion.p>
                     </div>
                 </div>
             </section>

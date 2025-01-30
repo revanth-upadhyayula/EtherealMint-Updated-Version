@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import {motion} from "framer-motion";
 const Main_content = () => {
 
   const [scrollY, setScrollY] = useState(0);
@@ -62,22 +63,22 @@ const Main_content = () => {
     <main>
       <section className="hero">
         <div className='main'>
-          <h2>
+          <motion.h2 initial={{opacity:0}} animate={{opacity:1}} transition={{duration: 2,ease:"easeInOut"}}>
             {currentText}
             <span className="blinking-cursor"></span>
-          </h2>
+          </motion.h2>
           <div className="imgcon">
             <img className="hero2" src="hero2.png" alt="Hero" style={{ transform: calculateTransform(scrollY, "hero2"), }} />
-            <h1 className="Token">Token</h1>
+            <motion.h1 initial={{opacity:0,scale: 0.2}} animate={{opacity:1,scale:1}} transition={{duration: 2}} className="Token">Token</motion.h1>
             <img className="hero1" src="hero1.png" alt="Hero" style={{ transform: calculateTransform(scrollY, "hero1"), }} />
           </div>
         </div>
-        <div className="bm">
-          <div className="hero-btn" >
+        <motion.div initial={{opacity:0,y:300}} animate={{opacity:1,y:0}} transition={{duration: 2}} className="bm">
+          <div className="hero-btn">
             <button className="create">Mint Token</button>
             <button className="explore">Explore</button>
           </div>
-        </div>
+        </motion.div>
       </section>
     </main>
   );

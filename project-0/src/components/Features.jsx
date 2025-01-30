@@ -1,3 +1,4 @@
+import {motion} from "framer-motion";
 const Features = () => {
     return (
         <section className="features">
@@ -7,11 +8,11 @@ const Features = () => {
 
             <div className="bigbox">
                 <div className="f">
-                    <h2 className="f1">Features of</h2>
-                    <h2 className="f2">Ethereum</h2>
+                    <motion.h2 initial={{opacity:0,y:-100}} whileInView={{opacity:1,y:0}} transition={{duration: 1,ease:"easeIn"}} viewport={{once:true}} className="f1">Features of</motion.h2>
+                    <motion.h2 initial={{opacity:0,y:100}} whileInView={{opacity:1,y:0}} transition={{duration: 1,delay:0.6,ease:"easeIn"}} viewport={{once:true,amount:1}} className="f2">Ethereum</motion.h2>
                 </div>
 
-                <div className="cards1">
+                <motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration: 1,ease:"easeIn"}} viewport={{once:true,amount:0.3}} className="cards1">
                     {/* Card 1 */}
                     <div className="lsideb">
                         <div className="feature-card">
@@ -56,9 +57,9 @@ const Features = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="cards2">
+                <motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration: 1,ease:"easeIn"}} viewport={{once:true,amount:0.3}} className="cards2">
                     {/* Card 3 */}
                     <div className="sidecard2">
                         <div className="lsides1">
@@ -105,7 +106,7 @@ const Features = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
             <img className="puz" src="featuresi.png" alt="Ethereum Features" />
         </section>

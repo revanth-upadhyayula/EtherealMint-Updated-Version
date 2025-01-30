@@ -44,8 +44,8 @@ const SiteWork = () => {
 
     return (
         <section ref={containerRef} className="how-our-site-works">
-            <h2 className="whead">How Our Site Works</h2>
-            <p className="subwhead">Follow these steps to interact with the ERC20 DAPP platform.</p>
+            <motion.h2 initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration: 1,ease:"easeIn"}} viewport={{once:true}} className="whead">How Our Site Works</motion.h2>
+            <motion.p initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration: 1,delay:0.2,ease:"easeIn"}} viewport={{once:true}} className="subwhead">Follow these steps to interact with the ERC20 DAPP platform.</motion.p>
 
             <div className="lineC">
                 {/* SVG for the animated line */}
@@ -72,7 +72,7 @@ const SiteWork = () => {
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1, scale: 1.25 }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.6,delay:0.1 }}
                     viewport={{ once: true, amount: 0.5 }}
                     className="step"
                 >
@@ -89,7 +89,7 @@ const SiteWork = () => {
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1, scale: 1.25 }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.6,delay:0.1 }}
                     viewport={{ once: true, amount: 0.5 }}
                     className="step"
                 >
@@ -107,7 +107,7 @@ const SiteWork = () => {
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1, scale: 1.25 }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.6,delay:0.1 }}
                     viewport={{ once: true, amount: 0.5 }}
                     className="step"
                 >
@@ -125,7 +125,7 @@ const SiteWork = () => {
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1, scale: 1.25 }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.6,delay:0.1 }}
                     viewport={{ once: true, amount: 0.5 }}
                     className="step"
                 >
@@ -143,7 +143,7 @@ const SiteWork = () => {
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1, scale: 1.25 }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.6,delay:0.1 }}
                     viewport={{ once: true, amount: 0.5 }}
                     className="step"
                 >

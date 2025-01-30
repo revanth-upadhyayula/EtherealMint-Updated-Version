@@ -1,6 +1,7 @@
+import {motion} from "framer-motion";
 const Navigation = () => {
   return (
-    <nav class="navbar">
+    <motion.nav initial={{opacity:0,y:-100}} animate={{opacity:1,y:0}} transition={{duration: 2,ease:"easeInOut"}} class="navbar">
           <div className='logo'>
               <img  className="logo" src='Logo.png' alt='logo'></img>
           </div>
@@ -14,7 +15,7 @@ const Navigation = () => {
             <li className='li'><a href="#" className="social-icon"><i class='bx bxl-twitter'></i></a></li> */}
           </ul>
           <div className="nav-button"><button id="connectButton">Connect to MetaMask</button></div>
-    </nav>
+    </motion.nav>
   );
 };
 
