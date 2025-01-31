@@ -77,7 +77,7 @@ const SiteWork = () => {
                     className="step"
                 >
                     <div className="step-content">
-                        <img src="verify_organization.png" alt="Step 1" />
+                        <img src="verified.png" alt="Step 1" />
                         <h3>Step 1: Verify Organization</h3>
                     </div>
                     <p className="step-description">
@@ -94,7 +94,7 @@ const SiteWork = () => {
                     className="step"
                 >
                     <div className="step-content">
-                        <img src="create_token.png" alt="Step 2" />
+                        <img src="token.png" alt="Step 2" />
                         <h3>Step 2: Create Token</h3>
                     </div>
                     <p className="step-description">
@@ -112,7 +112,7 @@ const SiteWork = () => {
                     className="step"
                 >
                     <div className="step-content">
-                        <img src="smart_contract.png" alt="Step 3" />
+                        <img src="smart-contracts.png" alt="Step 3" />
                         <h3>Step 3: Smart Contract Request</h3>
                     </div>
                     <p className="step-description">
@@ -130,7 +130,7 @@ const SiteWork = () => {
                     className="step"
                 >
                     <div className="step-content">
-                        <img src="transfer_token.png" alt="Step 4" />
+                        <img src="transfer.png" alt="Step 4" />
                         <h3>Step 4: Transfer Token</h3>
                     </div>
                     <p className="step-description">
@@ -148,7 +148,7 @@ const SiteWork = () => {
                     className="step"
                 >
                     <div className="step-content">
-                        <img src="etherscan_verification.png" alt="Step 5" />
+                        <img src="verification.png" alt="Step 5" />
                         <h3>Step 5: Verification and Updates</h3>
                     </div>
                     <p className="step-description">

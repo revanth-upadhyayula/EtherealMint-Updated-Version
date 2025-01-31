@@ -3,6 +3,10 @@
 * {
     cursor: url('./cursor.png'), auto;
 }
+body{
+    overflow:auto;
+    scrollbar-width: none;
+}
 
 .logo {
     height: 40px;
@@ -174,9 +178,7 @@ nav ul li a {
     }
 }
 
-.bm p {
-    color: #1a3971;
-}
+
 
 .hero-btn {
     display: flex;
@@ -265,18 +267,20 @@ nav ul li a {
     margin: auto;
 }
 
-.he .h21 {
+.h21 {
     font-size: 3rem;
+    font-family: "Titillium Web", serif;
 }
 
-.he .h22 {
+.h22 {
+    font-family: "Kumar One";
     font-size: 9rem;
 }
 
 .down h2 {
-    font-family: "Titillium Web", serif;
+    /* font-family: "Titillium Web", serif; */
     font-weight: 725;
-    font-size: 50px;
+    /* font-size: 50px; */
     font-style: normal;
     line-height: 0px;
     color: rgb(26, 57, 113);
@@ -290,6 +294,7 @@ nav ul li a {
     color: #1a3971;
     font-size: x-large;
     font-weight: 500;
+    /* position: fixed; */
 }
 
 .features {
@@ -383,7 +388,7 @@ nav ul li a {
 .rsides1:hover,
 .rsides2:hover,
 .rsideb:hover {
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
     background-color: #CADCFC;
 }
@@ -520,12 +525,12 @@ nav ul li a {
     margin: 10rem 0 0 0;
     display: block;
   }
-.line{
+/* .line{
     position: absolute;
     z-index: -1;
     width: 5vw;
     height: 135vh;
-}
+} */
 /* Line animation container */
 /* .line {
     position: relative;
@@ -668,3 +673,428 @@ nav ul li a {
     margin-bottom: 10px;
 }
 
+/* Base Styles - already present */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Atomic+Age&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Kumar+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap'); */
+
+/* Add responsiveness below */
+
+@media (max-width: 1200px) {
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    .Token {
+        font-size: 80px;
+        transform: translate(0%, 1rem);
+    }
+
+    .hero1 {
+        height: 9rem;
+    }
+
+    .hero2 {
+        height: 12rem;
+    }
+    .para {
+        width: 60vw;
+    }
+
+    .step {
+        flex-direction: column;
+        height: auto;
+        width: 80vw;
+    }
+
+    .step img {
+        max-width: 80px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero h2 {
+        font-size: 35px;
+    }
+
+    .Token {
+        font-size: 70px;
+    }
+
+    .hero1 {
+        height: 8rem;
+    }
+
+    .hero2 {
+        height: 10rem;
+    }
+
+    .down p {
+        width: 90%;
+        font-size: large;
+    }
+    .card1{
+        display: grid;
+        flex-direction: column;
+        justify-items: center;
+    }
+    .step {
+        width: 100%;
+        height: auto;
+    }
+
+    .step .step-description {
+        font-size: 14px;
+    }
+
+    .features .puz {
+        width: 90%;
+    }
+
+    .lsides1,
+    .lsides2,
+    .rsides1,
+    .rsides2 {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar{
+        width: 80%;
+    }
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .Token {
+        font-size: 60px;
+    }
+
+    .hero1 {
+        height: 6rem;
+    }
+
+    .hero2 {
+        height: 8rem;
+    }
+    .h21{
+        font-size: 20px;
+    }
+    .h22{
+        font-size: 20px;
+    }
+    .para {
+        width: 70vw;
+    }
+
+    
+
+    .down p {
+        font-size: medium;
+    }
+    .card1{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+    }
+    .lsides1,
+    .lsides2,
+    .rsides1,
+    .rsides2,
+    .rsideb {
+        height: auto;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .step {
+        width: 90%;
+    }
+
+    .step img {
+        max-width: 60px;
+    }
+
+    .step .step-description {
+        font-size: 12px;
+    }
+
+    .how-our-site-works .whead {
+        font-size: 3rem;
+    }
+
+    .how-our-site-works .subwhead {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    body{
+        overflow-x: hidden;
+        width: 100%;
+    }
+    .navbar{
+        width: 80%;
+        display: none;
+    }
+    .logo{
+        height: 2rem;
+    }
+    .nav-button{
+        width: 20%;
+    }
+    #connectButton{
+        width: 10%;
+    }
+    .hero{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .down{
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .he{
+        display: flex;
+        flex-direction: column;
+        /* gap: 10px; */
+    }
+    .h21{
+        font-size: 2.5rem;
+    }
+    .h22{
+        font-size: 2.5rem;
+    }
+    .hero h2 {
+        font-size: 42px;
+    }
+
+    .Token {
+        font-size: 76px;
+    }
+
+    .hero1 {
+        height: 4rem;
+        position: relative;
+        z-index: -1;
+        transform: translate(0%, -56%);
+    }
+
+    .hero2 {
+        height: 6rem;
+        position: relative;
+        z-index: -1;
+        transform: translate(0%, -56%);
+    }
+    .downmain{
+        margin: 0px 2px 30px 0px;
+    }
+    
+    .bigbox{
+        width: 100%;
+        height: 234vh;
+    }
+    .down p {
+        font-size: 20px;
+        width: 100%;
+        text-align:justify;
+    }
+    .f1{
+        font-size: 2.5rem;
+    }
+    .f2{
+        font-size: 2.5rem;
+    }
+    
+    .cards1{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        /* height: 40%; */
+        width: 100vw;
+        align-items: center;
+        margin-top: 1.25rem;
+        /* margin: auto; */
+    }
+    .cards2{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        /* height: 40%; */
+        width: 100vw;
+        align-items: center;
+        margin-top: 1.25rem;
+        /* margin: auto; */
+    }
+    .sidecard{
+        width: 100%;
+    }
+    .sidecard2{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        /* height: 40%; */
+        width: 100%;
+        align-items: center;
+        /* margin-top: 1.25rem; */
+        margin: auto;
+    }
+    .lsideb{
+        height: 15rem;
+        width: 94%;
+        margin: 10px auto;
+
+    } 
+    .lsides1,
+    .lsides2,
+    .rsides1,
+    .rsides2,
+    .rsideb {
+        height: 15rem;
+        width: 94%;
+        margin: 10px auto;
+    }
+    .lsidesb:hover{
+        transform: scale(1);
+    }
+    .lsides2:hover,
+    .lsides1:hover,
+    .rsides1:hover,
+    .rsides2:hover,
+    .rsideb:hover {
+        transform: scale(1);
+    }
+    .feature-card:hover .feature-content {
+        transform: scale(1);
+        opacity: 1;
+        background-color: #dde3ee;
+    }
+    
+    .feature-card:hover {
+        transform: scale(1);
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    .feature-heading h3 {
+        font-size: 1.2rem;
+    }
+    
+    .smart-contracts{
+        height: 8rem;
+        width: auto;
+    }
+    .defi{
+        height: 8rem;
+        width: auto;
+    }
+    .ethereum-2{
+        height: 11rem;
+        width: auto;
+    }
+    .security{
+        height: 10rem;
+        width: auto;
+    }
+    .dao{
+        height: 10rem;
+        width: auto;
+    }
+    .interoperability{
+        height: 10rem;
+        width: auto;
+    }
+    .steps{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+    .animated-line{
+        width: 100%;
+    }
+    .step{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        width: 100%;
+    }
+    .step:nth-child(even){
+        align-self: center;
+    }
+    .step:nth-child(odd){
+        align-self: center;
+    }
+    .step img {
+        max-width: 50px;
+    }
+
+    .step .step-description {
+        font-size: 1.2rem;
+        width: 65%;
+    }
+    .lineC{
+        display: none;
+    }
+    .how-our-site-works{
+        padding: 0px;
+    }
+    .how-our-site-works .whead {
+        /* text-align: justify; */
+        font-size: 2.25rem;
+    }
+
+    .how-our-site-works .subwhead {
+        font-size: 1rem;
+        margin: auto;
+        width: 80vw;
+    }
+
+    .features .puz {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .Token {
+        font-size: 40px;
+    }
+
+    .hero1 {
+        height: 3rem;
+    }
+
+    .hero2 {
+        height: 5rem;
+    }
+
+    .down h2 {
+        font-size: 25px;
+    }
+
+    .down p {
+        font-size: smaller;
+    }
+
+    .step {
+        width: 100%;
+    }
+
+    .step .step-description {
+        font-size: 8px;
+    }
+
+    .features .puz {
+        width: 100%;
+    }
+}
