@@ -759,77 +759,8 @@ nav ul li a {
     }
 }
 
+
 @media (max-width: 768px) {
-    .navbar{
-        width: 80%;
-    }
-    .hero h2 {
-        font-size: 30px;
-    }
-
-    .Token {
-        font-size: 60px;
-    }
-
-    .hero1 {
-        height: 6rem;
-    }
-
-    .hero2 {
-        height: 8rem;
-    }
-    .h21{
-        font-size: 20px;
-    }
-    .h22{
-        font-size: 20px;
-    }
-    .para {
-        width: 70vw;
-    }
-
-    
-
-    .down p {
-        font-size: medium;
-    }
-    .card1{
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-    }
-    .lsides1,
-    .lsides2,
-    .rsides1,
-    .rsides2,
-    .rsideb {
-        height: auto;
-        width: 90%;
-        margin: 20px auto;
-    }
-
-    .step {
-        width: 90%;
-    }
-
-    .step img {
-        max-width: 60px;
-    }
-
-    .step .step-description {
-        font-size: 12px;
-    }
-
-    .how-our-site-works .whead {
-        font-size: 3rem;
-    }
-
-    .how-our-site-works .subwhead {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 576px) {
     body{
         overflow-x: hidden;
         width: 100%;
@@ -848,7 +779,7 @@ nav ul li a {
         width: 10%;
     }
     .hero{
-        height: 100vh;
+        height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -865,6 +796,7 @@ nav ul li a {
         display: flex;
         flex-direction: column;
         /* gap: 10px; */
+        margin: 0px auto 0px auto;
     }
     .h21{
         font-size: 2.5rem;
@@ -899,7 +831,471 @@ nav ul li a {
     
     .bigbox{
         width: 100%;
-        height: 234vh;
+        height: 235vh;
+    }
+    .down p {
+        font-size: 20px;
+        width: 100%;
+        text-align:justify;
+    }
+    .f1{
+        font-size: 2.5rem;
+    }
+    .f2{
+        font-size: 2.5rem;
+    }
+    
+    .cards1{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        /* height: 40%; */
+        width: 100vw;
+        align-items: center;
+        margin-top: 1.25rem;
+        /* margin: auto; */
+    }
+    .cards2{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        /* height: 40%; */
+        width: 100vw;
+        align-items: center;
+        margin-top: 1.25rem;
+        /* margin: auto; */
+    }
+    .sidecard{
+        width: 100%;
+    }
+    .sidecard2{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        /* height: 40%; */
+        width: 100%;
+        align-items: center;
+        /* margin-top: 1.25rem; */
+        margin: auto;
+    }
+    .lsideb{
+        height: 15rem;
+        width: 94%;
+        margin: 10px auto;
+
+    } 
+    .lsides1,
+    .lsides2,
+    .rsides1,
+    .rsides2,
+    .rsideb {
+        height: 15rem;
+        width: 94%;
+        margin: 10px auto;
+    }
+    .lsidesb:hover{
+        transform: scale(1);
+    }
+    .lsides2:hover,
+    .lsides1:hover,
+    .rsides1:hover,
+    .rsides2:hover,
+    .rsideb:hover {
+        transform: scale(1);
+    }
+    .feature-card:hover .feature-content {
+        transform: scale(1);
+        opacity: 1;
+        background-color: #dde3ee;
+    }
+    
+    .feature-card:hover {
+        transform: scale(1);
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    .feature-heading h3 {
+        font-size: 1.2rem;
+    }
+    
+    .smart-contracts{
+        height: 8rem;
+        width: auto;
+    }
+    .defi{
+        height: 8rem;
+        width: auto;
+    }
+    .ethereum-2{
+        height: 11rem;
+        width: auto;
+    }
+    .security{
+        height: 10rem;
+        width: auto;
+    }
+    .dao{
+        height: 10rem;
+        width: auto;
+    }
+    .interoperability{
+        height: 10rem;
+        width: auto;
+    }
+    .steps{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+    .animated-line{
+        width: 100%;
+    }
+    .step{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        width: 100%;
+    }
+    .step:nth-child(even){
+        align-self: center;
+    }
+    .step:nth-child(odd){
+        align-self: center;
+    }
+    .step img {
+        max-width: 50px;
+    }
+
+    .step .step-description {
+        font-size: 1.2rem;
+        width: 65%;
+    }
+    .lineC{
+        display: none;
+    }
+    .how-our-site-works{
+        padding: 0px;
+    }
+    .how-our-site-works .whead {
+        /* text-align: justify; */
+        font-size: 2.25rem;
+    }
+
+    .how-our-site-works .subwhead {
+        font-size: 1rem;
+        margin: auto;
+        width: 80vw;
+    }
+
+    .features .puz {
+        width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    body{
+        overflow-x: hidden;
+        width: 100%;
+    }
+    .navbar{
+        width: 80%;
+        display: none;
+    }
+    .logo{
+        height: 2rem;
+    }
+    .nav-button{
+        width: 20%;
+    }
+    #connectButton{
+        width: 10%;
+    }
+    .hero{
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .down{
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .he{
+        display: flex;
+        flex-direction: column;
+        /* gap: 10px; */
+        margin: 0px auto 0px auto;
+    }
+    .h21{
+        font-size: 2.5rem;
+    }
+    .h22{
+        font-size: 2.5rem;
+    }
+    .hero h2 {
+        font-size: 42px;
+    }
+
+    .Token {
+        font-size: 76px;
+    }
+
+    .hero1 {
+        height: 4rem;
+        position: relative;
+        z-index: -1;
+        transform: translate(0%, -56%);
+    }
+
+    .hero2 {
+        height: 6rem;
+        position: relative;
+        z-index: -1;
+        transform: translate(0%, -56%);
+    }
+    .downmain{
+        margin: 0px 2px 30px 0px;
+    }
+    
+    .bigbox{
+        width: 100%;
+        height: 235vh;
+    }
+    .down p {
+        font-size: 20px;
+        width: 100%;
+        text-align:justify;
+    }
+    .f1{
+        font-size: 2.5rem;
+    }
+    .f2{
+        font-size: 2.5rem;
+    }
+    
+    .cards1{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        /* height: 40%; */
+        width: 100vw;
+        align-items: center;
+        margin-top: 1.25rem;
+        /* margin: auto; */
+    }
+    .cards2{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        /* height: 40%; */
+        width: 100vw;
+        align-items: center;
+        margin-top: 1.25rem;
+        /* margin: auto; */
+    }
+    .sidecard{
+        width: 100%;
+    }
+    .sidecard2{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        /* height: 40%; */
+        width: 100%;
+        align-items: center;
+        /* margin-top: 1.25rem; */
+        margin: auto;
+    }
+    .lsideb{
+        height: 15rem;
+        width: 94%;
+        margin: 10px auto;
+
+    } 
+    .lsides1,
+    .lsides2,
+    .rsides1,
+    .rsides2,
+    .rsideb {
+        height: 15rem;
+        width: 94%;
+        margin: 10px auto;
+    }
+    .lsidesb:hover{
+        transform: scale(1);
+    }
+    .lsides2:hover,
+    .lsides1:hover,
+    .rsides1:hover,
+    .rsides2:hover,
+    .rsideb:hover {
+        transform: scale(1);
+    }
+    .feature-card:hover .feature-content {
+        transform: scale(1);
+        opacity: 1;
+        background-color: #dde3ee;
+    }
+    
+    .feature-card:hover {
+        transform: scale(1);
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    .feature-heading h3 {
+        font-size: 1.2rem;
+    }
+    
+    .smart-contracts{
+        height: 8rem;
+        width: auto;
+    }
+    .defi{
+        height: 8rem;
+        width: auto;
+    }
+    .ethereum-2{
+        height: 11rem;
+        width: auto;
+    }
+    .security{
+        height: 10rem;
+        width: auto;
+    }
+    .dao{
+        height: 10rem;
+        width: auto;
+    }
+    .interoperability{
+        height: 10rem;
+        width: auto;
+    }
+    .steps{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+    .animated-line{
+        width: 100%;
+    }
+    .step{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        width: 100%;
+    }
+    .step:nth-child(even){
+        align-self: center;
+    }
+    .step:nth-child(odd){
+        align-self: center;
+    }
+    .step img {
+        max-width: 50px;
+    }
+
+    .step .step-description {
+        font-size: 1.2rem;
+        width: 65%;
+    }
+    .lineC{
+        display: none;
+    }
+    .how-our-site-works{
+        padding: 0px;
+    }
+    .how-our-site-works .whead {
+        /* text-align: justify; */
+        font-size: 2.25rem;
+    }
+
+    .how-our-site-works .subwhead {
+        font-size: 1rem;
+        margin: auto;
+        width: 80vw;
+    }
+
+    .features .puz {
+        width: 100%;
+    }
+}
+@media (max-width: 400px) {
+    body{
+        overflow-x: hidden;
+        width: 100%;
+    }
+    .navbar{
+        width: 80%;
+        display: none;
+    }
+    .logo{
+        height: 2rem;
+    }
+    .nav-button{
+        width: 20%;
+    }
+    #connectButton{
+        width: 10%;
+    }
+    .hero{
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .down{
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .he{
+        display: flex;
+        flex-direction: column;
+        /* gap: 10px; */
+        margin: 0px auto 0px auto;
+    }
+    .h21{
+        font-size: 2.5rem;
+    }
+    .h22{
+        font-size: 2.5rem;
+    }
+    .hero h2 {
+        font-size: 42px;
+    }
+
+    .Token {
+        font-size: 76px;
+    }
+
+    .hero1 {
+        height: 4rem;
+        position: relative;
+        z-index: -1;
+        transform: translate(0%, -56%);
+    }
+
+    .hero2 {
+        height: 6rem;
+        position: relative;
+        z-index: -1;
+        transform: translate(0%, -56%);
+    }
+    .downmain{
+        margin: 0px 2px 30px 0px;
+    }
+    
+    .bigbox{
+        width: 100%;
+        height: 200vh;
     }
     .down p {
         font-size: 20px;
@@ -1061,40 +1457,237 @@ nav ul li a {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 360px) {
+    body{
+        overflow-x: hidden;
+        width: 100%;
+    }
+    .navbar{
+        width: 80%;
+        display: none;
+    }
+    .logo{
+        height: 2rem;
+    }
+    .nav-button{
+        width: 20%;
+    }
+    #connectButton{
+        width: 10%;
+    }
+    .hero{
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .down{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .he{
+        display: flex;
+        flex-direction: column;
+        /* gap: 10px; */
+        margin: 0px auto 0px auto;
+    }
+    .h21{
+        font-size: 2.5rem;
+    }
+    .h22{
+        font-size: 2.5rem;
+    }
     .hero h2 {
-        font-size: 20px;
+        font-size: 42px;
     }
 
     .Token {
-        font-size: 40px;
+        font-size: 76px;
     }
 
     .hero1 {
-        height: 3rem;
+        height: 4rem;
+        position: relative;
+        z-index: -1;
+        transform: translate(0%, -56%);
     }
 
     .hero2 {
-        height: 5rem;
+        height: 6rem;
+        position: relative;
+        z-index: -1;
+        transform: translate(0%, -56%);
     }
-
-    .down h2 {
-        font-size: 25px;
+    .downmain{
+        margin: 0px 2px 30px 0px;
     }
-
-    .down p {
-        font-size: smaller;
-    }
-
-    .step {
+    
+    .bigbox{
         width: 100%;
+        height: 211vh;
+    }
+    .down p {
+        font-size: 20px;
+        width: 100%;
+        text-align:justify;
+    }
+    .f1{
+        font-size: 2.5rem;
+    }
+    .f2{
+        font-size: 2.5rem;
+    }
+    
+    .cards1{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        /* height: 40%; */
+        width: 100vw;
+        align-items: center;
+        margin-top: 1.25rem;
+        /* margin: auto; */
+    }
+    .cards2{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        /* height: 40%; */
+        width: 100vw;
+        align-items: center;
+        margin-top: 1.25rem;
+        /* margin: auto; */
+    }
+    .sidecard{
+        width: 100%;
+    }
+    .sidecard2{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        /* height: 40%; */
+        width: 100%;
+        align-items: center;
+        /* margin-top: 1.25rem; */
+        margin: auto;
+    }
+    .lsideb{
+        height: 15rem;
+        width: 94%;
+        margin: 10px auto;
+
+    } 
+    .lsides1,
+    .lsides2,
+    .rsides1,
+    .rsides2,
+    .rsideb {
+        height: 15rem;
+        width: 94%;
+        margin: 10px auto;
+    }
+    .lsidesb:hover{
+        transform: scale(1);
+    }
+    .lsides2:hover,
+    .lsides1:hover,
+    .rsides1:hover,
+    .rsides2:hover,
+    .rsideb:hover {
+        transform: scale(1);
+    }
+    .feature-card:hover .feature-content {
+        transform: scale(1);
+        opacity: 1;
+        background-color: #dde3ee;
+        font-size: 1rem;
+    }
+    
+    .feature-card:hover {
+        transform: scale(1);
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    .feature-heading h3 {
+        font-size: 1.2rem;
+    }
+    
+    .smart-contracts{
+        height: 8rem;
+        width: auto;
+    }
+    .defi{
+        height: 8rem;
+        width: auto;
+    }
+    .ethereum-2{
+        height: 11rem;
+        width: auto;
+    }
+    .security{
+        height: 10rem;
+        width: auto;
+    }
+    .dao{
+        height: 10rem;
+        width: auto;
+    }
+    .interoperability{
+        height: 10rem;
+        width: auto;
+    }
+    .steps{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+    .animated-line{
+        width: 100%;
+    }
+    .step{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        width: 100%;
+    }
+    .step:nth-child(even){
+        align-self: center;
+    }
+    .step:nth-child(odd){
+        align-self: center;
+    }
+    .step img {
+        max-width: 50px;
     }
 
     .step .step-description {
-        font-size: 8px;
+        font-size: 1rem;
+        width: 65%;
+    }
+    .lineC{
+        display: none;
+    }
+    .how-our-site-works{
+        padding: 0px;
+    }
+    .how-our-site-works .whead {
+        /* text-align: justify; */
+        font-size: 2.25rem;
+    }
+
+    .how-our-site-works .subwhead {
+        font-size: 1rem;
+        margin: auto;
+        width: 80vw;
     }
 
     .features .puz {
         width: 100%;
     }
 }
+
