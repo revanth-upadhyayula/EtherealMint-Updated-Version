@@ -1,4 +1,6 @@
 import {motion} from "framer-motion";
+import { Link } from "react-router-dom";
+
 const Navigation = () => {
   return (
     <motion.nav initial={{opacity:0,y:-100}} animate={{opacity:1,y:0}} transition={{duration: 2,ease:"easeInOut"}} class="navbar">
@@ -6,8 +8,9 @@ const Navigation = () => {
               <img  className="logo" src='Logo.png' alt='logo'></img>
           </div>
           <ul className='nav-items'>
-            <li className='li'><a href='#'>About</a></li>
-            <li className='li'><a href='#'>FAQ's</a></li>
+            <li className='li'><Link to='/'>Home</Link></li>
+            <li className='li'><Link to='/about'>About</Link></li>
+            <li className='li'><Link to='/faq'>FAQ's</Link></li>
             <li className='li'><a href='#'>Guide</a></li>
             <li className='li'><a href='#'>BlockChain</a></li>
             {/* <li className='li'><a href='#'></a></li> */}

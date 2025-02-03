@@ -38,7 +38,10 @@ nav {
     padding-right: 40px;
     list-style: none;
 }
-
+.about{
+    height: 100vh;
+    width: 100vw;
+}
 a:hover {
     background-color: #1a3971;
     color: #CADCFC;
@@ -70,6 +73,7 @@ a:hover {
 
 .li {
     width: 8rem;
+    text-align: center;
 }
 
 nav ul li a {
@@ -260,7 +264,8 @@ nav ul li a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50vw;
+    /* width: 50vw; */
+    text-align: justify;
 }
 
 .he {
@@ -679,7 +684,7 @@ nav ul li a {
 
 /* Add responsiveness below */
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     .hero h2 {
         font-size: 40px;
     }
@@ -692,7 +697,7 @@ nav ul li a {
     .hero1 {
         height: 9rem;
     }
-
+    
     .hero2 {
         height: 12rem;
     }
@@ -705,57 +710,338 @@ nav ul li a {
         height: auto;
         width: 80vw;
     }
-
+    
     .step img {
         max-width: 80px;
     }
+    .navbar{
+        width: 100%;
+        gap: 20px;
+    }
+    #connectButton{
+        padding: 9px;  
+    }
+    .h21{
+        font-size: 45px;
+    }
+    .h22{
+        font-size: 70px;
+    }
+    .feature-card:hover .feature-content {
+        transform: scale(1);
+        opacity: 1;
+        background-color: #dde3ee;
+        font-size: 1.5rem;
+    }
+    .para{
+        width: 50vw;
+    }
+    .steps{
+        width: 100%;
+        gap: 100px;
+    }
+    .step{
+        width: 40%;
+    }
+    .animated-line{
+        height: 130vh;
+        display: none;
+    }
+    .f1{
+        font-size: 2.95rem;
+    }
+    .f2{
+        font-size: 4.5rem;
+    }
 }
 
+@media (max-width: 1092px) {
+    .navbar{
+        width: 100%;
+        gap: 20px;
+    }
+    #connectButton{
+        padding: 9px;  
+    }
+    .h21{
+        font-size: 45px;
+    }
+    .h22{
+        font-size: 70px;
+    }
+    .feature-card:hover .feature-content {
+        transform: scale(1);
+        opacity: 1;
+        background-color: #dde3ee;
+        font-size: 1.5rem;
+    }
+    .para{
+        width: 50vw;
+    }
+    .steps{
+        width: 100%;
+        gap: 100px;
+    }
+    .step{
+        width: 40%;
+    }
+    .animated-line{
+        height: 130vh;
+        display: none;
+    }
+    .f1{
+        font-size: 2.95rem;
+    }
+    .f2{
+        font-size: 4.5rem;
+    }
+}
 @media (max-width: 992px) {
+    body{
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .navbar{
+        width: 100%;
+        /* display: none; */
+        display: flex;
+        gap: 0px;
+        margin-left: 0px ;
+        margin-right: 5px;
+        
+    }
+    .nav-items{
+        width: 45%;
+        gap: 10px;
+        padding: auto;
+    }
+    .logo{
+        /* height: rem; */
+        width: 8rem;
+        height: auto;
+    }
+    .nav-button{
+        width: 6rem;
+    }
+    #connectButton{
+        /* width: 10%; */
+        padding: 3px;
+    }
+    .hero{
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .down{
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .he{
+        display: flex;
+        flex-direction: column;
+        /* gap: 10px; */
+        margin: 0px auto 0px auto;
+    }
+    .h21{
+        font-size: 2.5rem;
+    }
+    .h22{
+        font-size: 2.5rem;
+    }
     .hero h2 {
-        font-size: 35px;
+        font-size: 42px;
     }
 
     .Token {
-        font-size: 70px;
+        font-size: 76px;
     }
 
     .hero1 {
-        height: 8rem;
+        height: 4.7rem;
+        position: relative;
+        z-index: -1;
+        transform: translate(0%, -56%);
     }
 
     .hero2 {
-        height: 10rem;
+        height: 6.7rem;
+        position: relative;
+        z-index: 1;
+        transform: translate(0%, -56%);
     }
-
+    .downmain{
+        margin: 0px 2px 30px 0px;
+    }
+    .para{
+        width: 70vw;
+    }
+    .bigbox{
+        width: 100%;
+        height: 235vh;
+    }
     .down p {
-        width: 90%;
-        font-size: large;
+        font-size: 20px;
+        width: 100%;
+        text-align:justify;
     }
-    .card1{
-        display: grid;
+    .f1{
+        font-size: 2.95rem;
+    }
+    .f2{
+        font-size: 4.5rem;
+    }
+    
+    .cards1{
+        display: flex;
         flex-direction: column;
         justify-items: center;
+        /* height: 40%; */
+        width: 100vw;
+        align-items: center;
+        margin-top: 1.25rem;
+        /* margin: auto; */
     }
-    .step {
+    .cards2{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        /* height: 40%; */
+        width: 100vw;
+        align-items: center;
+        margin-top: 1.25rem;
+        /* margin: auto; */
+    }
+    .sidecard{
         width: 100%;
-        height: auto;
     }
-
-    .step .step-description {
-        font-size: 14px;
+    .sidecard2{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        /* height: 40%; */
+        width: 100%;
+        align-items: center;
+        /* margin-top: 1.25rem; */
+        margin: auto;
     }
+    .lsideb{
+        height: 15rem;
+        width: 94%;
+        margin: 10px auto;
 
-    .features .puz {
-        width: 90%;
-    }
-
+    } 
     .lsides1,
     .lsides2,
     .rsides1,
-    .rsides2 {
-        width: 90%;
-        margin: 20px auto;
+    .rsides2,
+    .rsideb {
+        height: 15rem;
+        width: 94%;
+        margin: 10px auto;
+    }
+    .lsidesb:hover{
+        transform: scale(1);
+    }
+    .lsides2:hover,
+    .lsides1:hover,
+    .rsides1:hover,
+    .rsides2:hover,
+    .rsideb:hover {
+        transform: scale(1);
+    }
+    .feature-card:hover .feature-content {
+        transform: scale(1);
+        opacity: 1;
+        background-color: #dde3ee;
+    }
+    
+    .feature-card:hover {
+        transform: scale(1);
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    .feature-heading h3 {
+        font-size: 1.2rem;
+    }
+    
+    .smart-contracts{
+        height: 8rem;
+        width: auto;
+    }
+    .defi{
+        height: 8rem;
+        width: auto;
+    }
+    .ethereum-2{
+        height: 11rem;
+        width: auto;
+    }
+    .security{
+        height: 10rem;
+        width: auto;
+    }
+    .dao{
+        height: 10rem;
+        width: auto;
+    }
+    .interoperability{
+        height: 10rem;
+        width: auto;
+    }
+    .steps{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+    .animated-line{
+        width: 100%;
+    }
+    .step{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        width: 100%;
+    }
+    .step:nth-child(even){
+        align-self: center;
+    }
+    .step:nth-child(odd){
+        align-self: center;
+    }
+    .step img {
+        max-width: 50px;
+    }
+
+    .step .step-description {
+        font-size: 1.2rem;
+        width: 65%;
+    }
+    .lineC{
+        display: none;
+    }
+    .how-our-site-works{
+        padding: 0px;
+    }
+    .how-our-site-works .whead {
+        /* text-align: justify; */
+        font-size: 2.25rem;
+    }
+
+    .how-our-site-works .subwhead {
+        font-size: 1rem;
+        margin: auto;
+        width: 80vw;
+    }
+
+    .features .puz {
+        width: 100%;
     }
 }
 
@@ -813,16 +1099,16 @@ nav ul li a {
     }
 
     .hero1 {
-        height: 4rem;
+        height: 4.7rem;
         position: relative;
         z-index: -1;
         transform: translate(0%, -56%);
     }
 
     .hero2 {
-        height: 6rem;
+        height: 6.7rem;
         position: relative;
-        z-index: -1;
+        z-index: 1;
         transform: translate(0%, -56%);
     }
     .downmain{
@@ -1045,16 +1331,16 @@ nav ul li a {
     }
 
     .hero1 {
-        height: 4rem;
+        height: 4.7rem;
         position: relative;
         z-index: -1;
         transform: translate(0%, -56%);
     }
 
     .hero2 {
-        height: 6rem;
+        height: 6.7rem;
         position: relative;
-        z-index: -1;
+        z-index: 1;
         transform: translate(0%, -56%);
     }
     .downmain{
@@ -1214,6 +1500,9 @@ nav ul li a {
         font-size: 2.25rem;
     }
 
+    .para{
+        width: 70%;
+    }
     .how-our-site-works .subwhead {
         font-size: 1rem;
         margin: auto;
@@ -1249,12 +1538,20 @@ nav ul li a {
         justify-content: center;
         align-items: center;
     }
+    .hero2{
+        height: 6rem;
+        position: relative;
+        z-index: 1;
+    }
     .down{
-        height: 80vh;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .para{
+        width: 70%;
     }
     .he{
         display: flex;
@@ -1277,16 +1574,16 @@ nav ul li a {
     }
 
     .hero1 {
-        height: 4rem;
+        height: 4.7rem;
         position: relative;
         z-index: -1;
         transform: translate(0%, -56%);
     }
 
     .hero2 {
-        height: 6rem;
+        height: 6.7rem;
         position: relative;
-        z-index: -1;
+        z-index: 1;
         transform: translate(0%, -56%);
     }
     .downmain{
@@ -1482,6 +1779,9 @@ nav ul li a {
         justify-content: center;
         align-items: center;
     }
+    .hero1{
+        transform: translate(0%, -30%);
+    }
     .down{
         height: 100vh;
         display: flex;
@@ -1510,16 +1810,16 @@ nav ul li a {
     }
 
     .hero1 {
-        height: 4rem;
+        height: 4.7rem;
         position: relative;
         z-index: -1;
         transform: translate(0%, -56%);
     }
 
     .hero2 {
-        height: 6rem;
+        height: 6.7rem;
         position: relative;
-        z-index: -1;
+        z-index: 1;
         transform: translate(0%, -56%);
     }
     .downmain{
@@ -1612,7 +1912,7 @@ nav ul li a {
         box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
     }
     .feature-heading h3 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     
     .smart-contracts{
