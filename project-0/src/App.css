@@ -3,13 +3,15 @@
 * {
     cursor: url('./cursor.png'), auto;
 }
-body{
-    overflow:auto;
+
+body {
+    overflow: auto;
     scrollbar-width: none;
 }
 
 .logo {
-    height: 40px;
+    height: 2.75rem;
+    width: auto;
 }
 
 nav {
@@ -31,23 +33,40 @@ nav {
     border-radius: 24px;
     background-color: #CADCFC;
     width: 40vw;
-    flex: 0 1 0%;
+    /* flex: 0 1 0%; */
     height: 64px;
     align-items: center;
     justify-content: center;
     padding-right: 40px;
     list-style: none;
+    margin: auto;
+    text-align: center;
 }
-.about{
+
+.about {
     height: 100vh;
     width: 100vw;
 }
-a:hover {
+
+nav a:hover {
     background-color: #1a3971;
     color: #CADCFC;
     border: #7f94bb;
     padding: 15px;
     border-radius: 24px;
+}
+
+.nav-btn {
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #1a3971;
+    /* visibility: hidden; */
+    display: none;
+    opacity: 0;
+    font-size: 1.8rem;
 }
 
 #connectButton {
@@ -63,9 +82,29 @@ a:hover {
     line-height: 26px;
     padding: 9px;
     font-family: 'Bona Nova SC';
+    display: none;
+}
+
+#connectButton1 {
+    background-color: #1a3971;
+    border: none;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 15px;
+    margin: 0 auto 2px 0;
+    line-height: 26px;
+    padding: 9px;
+    font-family: 'Bona Nova SC';
 }
 
 #connectButton:hover {
+    cursor: pointer;
+}
+
+#connectButton1:hover {
     background-color: rgb(202, 220, 252);
     color: #1a3971;
     cursor: pointer;
@@ -73,7 +112,6 @@ a:hover {
 
 .li {
     width: 8rem;
-    text-align: center;
 }
 
 nav ul li a {
@@ -241,6 +279,24 @@ nav ul li a {
     /* Ensures the image is in front of the text */
 }
 
+.back-button {
+    background-color: #1a3971;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 20px;
+    position: absolute;
+    left: 2rem;
+}
+
+.back-button:hover {
+    background-color: #CADCFC;
+    color: #1a3971;
+}
+
 .down {
     width: 100vw;
     height: 120vh;
@@ -250,7 +306,6 @@ nav ul li a {
     margin-top: 30px;
 
 }
-
 .downmain {
     display: flex;
     justify-content: space-around;
@@ -293,12 +348,74 @@ nav ul li a {
 
 .down p {
     width: 70%;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     color: #1a3971;
     font-size: x-large;
     font-weight: 500;
+    text-align: justify;
+    /* position: fixed; */
+}
+.ethereum {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+
+}
+
+.ethdown {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+
+}
+
+.eth-para {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 50vw; */
+    text-align: justify;
+}
+
+.eth-he {
+    margin: auto;
+}
+
+.eth-h21 {
+    font-size: 3rem;
+    font-family: "Titillium Web", serif;
+}
+
+.eth-h22 {
+    font-family: "Kumar One";
+    font-size: 9rem;
+}
+
+.ethereum h2 {
+    /* font-family: "Titillium Web", serif; */
+    font-weight: 725;
+    /* font-size: 50px; */
+    font-style: normal;
+    line-height: 0px;
+    color: rgb(26, 57, 113);
+}
+
+.ethereum p {
+    width: 70%;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    color: #1a3971;
+    font-size: x-large;
+    font-weight: 500;
+    text-align: justify;
     /* position: fixed; */
 }
 
@@ -518,7 +635,8 @@ nav ul li a {
     width: 100vw;
     height: 100vh;
 }
-.lineC{
+
+.lineC {
     display: flex;
     justify-content: center;
     /* width: 5vw;
@@ -526,10 +644,12 @@ nav ul li a {
     position: absolute;
     margin-top: 12rem;
 }
+
 .animated-line {
     margin: 10rem 0 0 0;
     display: block;
-  }
+}
+
 /* .line{
     position: absolute;
     z-index: -1;
@@ -566,16 +686,19 @@ nav ul li a {
     padding: 20px;
     font-family: "Kumar One", serif;
 }
-.whead{
+
+.whead {
     font-size: 4rem;
     font-family: 'Kumar One';
     color: #1a3971;
 }
-.subwhead{
+
+.subwhead {
     font-family: "Bona Nova SC";
     font-size: 2rem;
     color: #7487a9;
 }
+
 .steps {
     display: flex;
     flex-direction: column;
@@ -663,7 +786,7 @@ nav ul li a {
     align-items: center;
     font-size: 16px;
     margin: auto;
-    font-family: "Bona Nova SC",serif;
+    font-family: "Bona Nova SC", serif;
 }
 
 /* Show paragraph when hovered */
@@ -685,6 +808,23 @@ nav ul li a {
 /* Add responsiveness below */
 
 @media (max-width: 1300px) {
+    .back-button {
+        background-color: #1a3971;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 20px;
+        position: absolute;
+        left: 2rem;
+    }
+    
+    .back-button:hover {
+        background-color: #CADCFC;
+        color: #1a3971;
+    }
     .hero h2 {
         font-size: 40px;
     }
@@ -697,11 +837,15 @@ nav ul li a {
     .hero1 {
         height: 9rem;
     }
-    
+
     .hero2 {
         height: 12rem;
     }
+
     .para {
+        width: 60vw;
+    }
+    .eth-para {
         width: 60vw;
     }
 
@@ -710,154 +854,262 @@ nav ul li a {
         height: auto;
         width: 80vw;
     }
-    
+
     .step img {
         max-width: 80px;
     }
-    .navbar{
-        width: 100%;
+
+    .navbar {
+        width: 83%;
         gap: 20px;
     }
-    #connectButton{
-        padding: 9px;  
+
+    #connectButton1 {
+        padding: 9px;
     }
-    .h21{
+
+    .h21 {
         font-size: 45px;
     }
-    .h22{
+
+    .h22 {
         font-size: 70px;
     }
+    .eth-h21 {
+        font-size: 45px;
+    }
+
+    .eth-h22 {
+        font-size: 70px;
+    }
+
     .feature-card:hover .feature-content {
         transform: scale(1);
         opacity: 1;
         background-color: #dde3ee;
         font-size: 1.5rem;
     }
-    .para{
+
+    .para {
         width: 50vw;
     }
-    .steps{
+    .eth-para {
+        width: 50vw;
+    }
+
+    .steps {
         width: 100%;
         gap: 100px;
     }
-    .step{
+
+    .step {
         width: 40%;
     }
-    .animated-line{
+
+    .animated-line {
         height: 130vh;
         display: none;
     }
-    .f1{
+
+    .f1 {
         font-size: 2.95rem;
     }
-    .f2{
+
+    .f2 {
         font-size: 4.5rem;
     }
 }
 
 @media (max-width: 1092px) {
-    .navbar{
-        width: 100%;
+    .navbar {
+        width: 92%;
         gap: 20px;
     }
-    #connectButton{
-        padding: 9px;  
+
+    .nav-items {
+        text-align: center;
+        gap: 15px;
     }
-    .h21{
+
+    #connectButton1 {
+        padding: 9px;
+    }
+    .back-button {
+        background-color: #1a3971;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 20px;
+        position: absolute;
+        left: 2rem;
+    }
+    
+    .back-button:hover {
+        background-color: #CADCFC;
+        color: #1a3971;
+    }
+    .h21 {
         font-size: 45px;
     }
-    .h22{
+
+    .h22 {
         font-size: 70px;
     }
+    .eth-h21 {
+        font-size: 45px;
+    }
+
+    .eth-h22 {
+        font-size: 70px;
+    }
+
     .feature-card:hover .feature-content {
         transform: scale(1);
         opacity: 1;
         background-color: #dde3ee;
         font-size: 1.5rem;
     }
-    .para{
+
+    .eth-para {
         width: 50vw;
     }
-    .steps{
+
+    .steps {
         width: 100%;
         gap: 100px;
     }
-    .step{
+
+    .step {
         width: 40%;
     }
-    .animated-line{
+
+    .animated-line {
         height: 130vh;
         display: none;
     }
-    .f1{
+
+    .f1 {
         font-size: 2.95rem;
     }
-    .f2{
+
+    .f2 {
         font-size: 4.5rem;
     }
 }
+
 @media (max-width: 992px) {
-    body{
+    body {
         overflow-x: hidden;
         width: 100%;
     }
 
-    .navbar{
-        width: 100%;
+    .navbar {
+        width: 90%;
         /* display: none; */
         display: flex;
         gap: 0px;
-        margin-left: 0px ;
-        margin-right: 5px;
-        
+        /* margin-left: 0px ;
+        margin-right: 5px; */
+
     }
-    .nav-items{
-        width: 45%;
+
+    .nav-items {
+        width: 50%;
         gap: 10px;
         padding: auto;
+        text-align: center;
     }
-    .logo{
+
+    .logo {
         /* height: rem; */
-        width: 8rem;
-        height: auto;
+        width: auto;
+        height: 2.75rem;
     }
-    .nav-button{
+
+    .nav-button {
         width: 6rem;
     }
-    #connectButton{
+
+    #connectButton1 {
         /* width: 10%; */
         padding: 3px;
     }
-    .hero{
+    .back-button {
+        background-color: #1a3971;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 20px;
+        position: absolute;
+        left: 2rem;
+    }
+    
+    .back-button:hover {
+        background-color: #CADCFC;
+        color: #1a3971;
+    }
+    .hero {
         height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .down{
+
+    .down {
         height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .he{
+
+    .he {
         display: flex;
         flex-direction: column;
         /* gap: 10px; */
         margin: 0px auto 0px auto;
     }
-    .h21{
+
+    .h21 {
         font-size: 2.5rem;
     }
-    .h22{
+
+    .h22 {
         font-size: 2.5rem;
     }
+
     .hero h2 {
         font-size: 42px;
     }
+    .ethereum {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .eth-he {
+        display: flex;
+        flex-direction: column;
+        /* gap: 10px; */
+        margin: 0px auto 0px auto;
+    }
+
+    .eth-h21 {
+        font-size: 2.5rem;
+    }
+
+    .eth-h22 {
+        font-size: 2.5rem;
+    }
     .Token {
         font-size: 76px;
     }
@@ -875,29 +1127,42 @@ nav ul li a {
         z-index: 1;
         transform: translate(0%, -56%);
     }
-    .downmain{
+
+    .downmain {
         margin: 0px 2px 30px 0px;
     }
-    .para{
+
+    .para {
         width: 70vw;
     }
-    .bigbox{
+    .ethdown {
+        margin: 0px 2px 30px 0px;
+    }
+
+    .eth-para {
+        width: 70vw;
+    }
+
+    .bigbox {
         width: 100%;
         height: 235vh;
     }
-    .down p {
+
+    .ethereum p {
         font-size: 20px;
         width: 100%;
-        text-align:justify;
+        text-align: justify;
     }
-    .f1{
+
+    .f1 {
         font-size: 2.95rem;
     }
-    .f2{
+
+    .f2 {
         font-size: 4.5rem;
     }
-    
-    .cards1{
+
+    .cards1 {
         display: flex;
         flex-direction: column;
         justify-items: center;
@@ -907,7 +1172,8 @@ nav ul li a {
         margin-top: 1.25rem;
         /* margin: auto; */
     }
-    .cards2{
+
+    .cards2 {
         display: flex;
         flex-direction: column;
         justify-items: center;
@@ -917,10 +1183,12 @@ nav ul li a {
         margin-top: 1.25rem;
         /* margin: auto; */
     }
-    .sidecard{
+
+    .sidecard {
         width: 100%;
     }
-    .sidecard2{
+
+    .sidecard2 {
         display: flex;
         flex-direction: column;
         justify-items: center;
@@ -930,12 +1198,14 @@ nav ul li a {
         /* margin-top: 1.25rem; */
         margin: auto;
     }
-    .lsideb{
+
+    .lsideb {
         height: 15rem;
         width: 94%;
         margin: 10px auto;
 
-    } 
+    }
+
     .lsides1,
     .lsides2,
     .rsides1,
@@ -945,9 +1215,11 @@ nav ul li a {
         width: 94%;
         margin: 10px auto;
     }
-    .lsidesb:hover{
+
+    .lsidesb:hover {
         transform: scale(1);
     }
+
     .lsides2:hover,
     .lsides1:hover,
     .rsides1:hover,
@@ -955,66 +1227,79 @@ nav ul li a {
     .rsideb:hover {
         transform: scale(1);
     }
+
     .feature-card:hover .feature-content {
         transform: scale(1);
         opacity: 1;
         background-color: #dde3ee;
     }
-    
+
     .feature-card:hover {
         transform: scale(1);
         box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
     }
+
     .feature-heading h3 {
         font-size: 1.2rem;
     }
-    
-    .smart-contracts{
+
+    .smart-contracts {
         height: 8rem;
         width: auto;
     }
-    .defi{
+
+    .defi {
         height: 8rem;
         width: auto;
     }
-    .ethereum-2{
+
+    .ethereum-2 {
         height: 11rem;
         width: auto;
     }
-    .security{
+
+    .security {
         height: 10rem;
         width: auto;
     }
-    .dao{
+
+    .dao {
         height: 10rem;
         width: auto;
     }
-    .interoperability{
+
+    .interoperability {
         height: 10rem;
         width: auto;
     }
-    .steps{
+
+    .steps {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 4rem;
     }
-    .animated-line{
+
+    .animated-line {
         width: 100%;
     }
-    .step{
+
+    .step {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 10px;
         width: 100%;
     }
-    .step:nth-child(even){
+
+    .step:nth-child(even) {
         align-self: center;
     }
-    .step:nth-child(odd){
+
+    .step:nth-child(odd) {
         align-self: center;
     }
+
     .step img {
         max-width: 50px;
     }
@@ -1023,12 +1308,15 @@ nav ul li a {
         font-size: 1.2rem;
         width: 65%;
     }
-    .lineC{
+
+    .lineC {
         display: none;
     }
-    .how-our-site-works{
+
+    .how-our-site-works {
         padding: 0px;
     }
+
     .how-our-site-works .whead {
         /* text-align: justify; */
         font-size: 2.25rem;
@@ -1047,49 +1335,158 @@ nav ul li a {
 
 
 @media (max-width: 768px) {
-    body{
+    body {
         overflow-x: hidden;
         width: 100%;
     }
-    .navbar{
-        width: 80%;
+
+    .nav-btn {
+        /* visibility: visible; */
+        display: block;
+        opacity: 1;
+        top: 2rem;
+        right: 3rem;
+        position: absolute;
+    }
+
+    .navbar {
+        /* margin: 0px 10rem; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 13rem;
+    }
+
+    nav a:hover {
+        background-color: #1a3971;
+        color: #CADCFC;
+        border: #7f94bb;
+        padding: 15px;
+        border-radius: 24px;
+        width: 5rem;
+    }
+
+    .nav-items {
+        position: fixed;
+        top: 0;
+        left: -130vw;
+        height: 100%;
+        /* width: 100%; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        /* background-color: #1a3971; */
+        text-align: left;
+        transition: 1s;
+        border-radius: 0;
+    }
+
+    .responsive_nav {
+        transform: translatex(130vw);
+        z-index: 2;
+    }
+
+    .nav-close-btn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .logo {
+        height: 2.75rem;
+        width: auto;
+    }
+
+    .nav-button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    #connectButton {
+        display: flex;
+        /* width: 10%; */
+        margin: 0;
+    }
+
+    #connectButton1 {
         display: none;
     }
-    .logo{
-        height: 2rem;
+
+    .back-button {
+        background-color: #1a3971;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 20px;
+        position: absolute;
+        left: 2rem;
     }
-    .nav-button{
-        width: 20%;
+    
+    .back-button:hover {
+        background-color: #CADCFC;
+        color: #1a3971;
     }
-    #connectButton{
-        width: 10%;
-    }
-    .hero{
+
+    .hero {
         height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .down{
+
+    .down {
         height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .he{
+
+    .he {
         display: flex;
         flex-direction: column;
         /* gap: 10px; */
         margin: 0px auto 0px auto;
     }
-    .h21{
+
+    .h21 {
         font-size: 2.5rem;
     }
-    .h22{
+
+    .h22 {
         font-size: 2.5rem;
     }
+    .ethereum {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .eth-he {
+        display: flex;
+        flex-direction: column;
+        /* gap: 10px; */
+        margin: 0px auto 0px auto;
+    }
+
+    .eth-h21 {
+        font-size: 2.5rem;
+    }
+
+    .eth-h22 {
+        font-size: 2.5rem;
+    }
+
     .hero h2 {
         font-size: 42px;
     }
@@ -1111,27 +1508,31 @@ nav ul li a {
         z-index: 1;
         transform: translate(0%, -56%);
     }
-    .downmain{
+
+    .ethdown {
         margin: 0px 2px 30px 0px;
     }
-    
-    .bigbox{
+
+    .bigbox {
         width: 100%;
         height: 235vh;
     }
-    .down p {
+
+    .ethereum p {
         font-size: 20px;
         width: 100%;
-        text-align:justify;
+        text-align: justify;
     }
-    .f1{
+
+    .f1 {
         font-size: 2.5rem;
     }
-    .f2{
+
+    .f2 {
         font-size: 2.5rem;
     }
-    
-    .cards1{
+
+    .cards1 {
         display: flex;
         flex-direction: column;
         justify-items: center;
@@ -1141,7 +1542,8 @@ nav ul li a {
         margin-top: 1.25rem;
         /* margin: auto; */
     }
-    .cards2{
+
+    .cards2 {
         display: flex;
         flex-direction: column;
         justify-items: center;
@@ -1151,10 +1553,12 @@ nav ul li a {
         margin-top: 1.25rem;
         /* margin: auto; */
     }
-    .sidecard{
+
+    .sidecard {
         width: 100%;
     }
-    .sidecard2{
+
+    .sidecard2 {
         display: flex;
         flex-direction: column;
         justify-items: center;
@@ -1164,12 +1568,14 @@ nav ul li a {
         /* margin-top: 1.25rem; */
         margin: auto;
     }
-    .lsideb{
+
+    .lsideb {
         height: 15rem;
         width: 94%;
         margin: 10px auto;
 
-    } 
+    }
+
     .lsides1,
     .lsides2,
     .rsides1,
@@ -1179,9 +1585,11 @@ nav ul li a {
         width: 94%;
         margin: 10px auto;
     }
-    .lsidesb:hover{
+
+    .lsidesb:hover {
         transform: scale(1);
     }
+
     .lsides2:hover,
     .lsides1:hover,
     .rsides1:hover,
@@ -1189,66 +1597,79 @@ nav ul li a {
     .rsideb:hover {
         transform: scale(1);
     }
+
     .feature-card:hover .feature-content {
         transform: scale(1);
         opacity: 1;
         background-color: #dde3ee;
     }
-    
+
     .feature-card:hover {
         transform: scale(1);
         box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
     }
+
     .feature-heading h3 {
         font-size: 1.2rem;
     }
-    
-    .smart-contracts{
+
+    .smart-contracts {
         height: 8rem;
         width: auto;
     }
-    .defi{
+
+    .defi {
         height: 8rem;
         width: auto;
     }
-    .ethereum-2{
+
+    .ethereum-2 {
         height: 11rem;
         width: auto;
     }
-    .security{
+
+    .security {
         height: 10rem;
         width: auto;
     }
-    .dao{
+
+    .dao {
         height: 10rem;
         width: auto;
     }
-    .interoperability{
+
+    .interoperability {
         height: 10rem;
         width: auto;
     }
-    .steps{
+
+    .steps {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 4rem;
     }
-    .animated-line{
+
+    .animated-line {
         width: 100%;
     }
-    .step{
+
+    .step {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 10px;
         width: 100%;
     }
-    .step:nth-child(even){
+
+    .step:nth-child(even) {
         align-self: center;
     }
-    .step:nth-child(odd){
+
+    .step:nth-child(odd) {
         align-self: center;
     }
+
     .step img {
         max-width: 50px;
     }
@@ -1257,12 +1678,15 @@ nav ul li a {
         font-size: 1.2rem;
         width: 65%;
     }
-    .lineC{
+
+    .lineC {
         display: none;
     }
-    .how-our-site-works{
+
+    .how-our-site-works {
         padding: 0px;
     }
+
     .how-our-site-works .whead {
         /* text-align: justify; */
         font-size: 2.25rem;
@@ -1278,50 +1702,148 @@ nav ul li a {
         width: 100%;
     }
 }
+
 @media (max-width: 576px) {
-    body{
+    body {
         overflow-x: hidden;
         width: 100%;
     }
-    .navbar{
-        width: 80%;
-        display: none;
+
+    .nav-btn {
+        /* visibility: visible; */
+        display: block;
+        opacity: 1;
+        top: 2rem;
+        right: 3rem;
+        position: absolute;
     }
-    .logo{
-        height: 2rem;
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 13rem;
+        margin-left: 25px;
     }
-    .nav-button{
-        width: 20%;
+
+    .nav-items {
+        position: fixed;
+        top: 0;
+        left: -130vw;
+        height: 100%;
+        /* width: 100%; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        /* background-color: #1a3971; */
+        text-align: left;
+        transition: 1s;
+        border-radius: 0px;
+
     }
-    #connectButton{
+
+    .responsive_nav {
+        transform: translatex(130vw);
+        z-index: 2;
+    }
+
+    .nav-close-btn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .logo {
+        height: 2.75rem;
+        width: auto;
+    }
+
+    .nav-button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #connectButton {
+        /* width: 10%; */
+        margin: 0;
+    }
+
+    #connectButton1 {
         width: 10%;
     }
-    .hero{
+    .back-button {
+        background-color: #1a3971;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 20px;
+        position: absolute;
+        left: 2rem;
+    }
+    
+    .back-button:hover {
+        background-color: #CADCFC;
+        color: #1a3971;
+    }
+    .hero {
         height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .down{
+
+    .down {
         height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .he{
+
+    .he {
         display: flex;
         flex-direction: column;
         /* gap: 10px; */
         margin: 0px auto 0px auto;
     }
-    .h21{
+
+    .h21 {
         font-size: 2.5rem;
     }
-    .h22{
+
+    .h22 {
         font-size: 2.5rem;
     }
+    .ethereum {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .eth-he {
+        display: flex;
+        flex-direction: column;
+        /* gap: 10px; */
+        margin: 0px auto 0px auto;
+    }
+
+    .eth-h21 {
+        font-size: 2.5rem;
+    }
+
+    .eth-h22 {
+        font-size: 2.5rem;
+    }
+
     .hero h2 {
         font-size: 42px;
     }
@@ -1343,27 +1865,31 @@ nav ul li a {
         z-index: 1;
         transform: translate(0%, -56%);
     }
-    .downmain{
+
+    .ethdown {
         margin: 0px 2px 30px 0px;
     }
-    
-    .bigbox{
+
+    .bigbox {
         width: 100%;
         height: 235vh;
     }
-    .down p {
+
+    .ethereum p {
         font-size: 20px;
         width: 100%;
-        text-align:justify;
+        text-align: justify;
     }
-    .f1{
+
+    .f1 {
         font-size: 2.5rem;
     }
-    .f2{
+
+    .f2 {
         font-size: 2.5rem;
     }
-    
-    .cards1{
+
+    .cards1 {
         display: flex;
         flex-direction: column;
         justify-items: center;
@@ -1373,7 +1899,8 @@ nav ul li a {
         margin-top: 1.25rem;
         /* margin: auto; */
     }
-    .cards2{
+
+    .cards2 {
         display: flex;
         flex-direction: column;
         justify-items: center;
@@ -1383,10 +1910,12 @@ nav ul li a {
         margin-top: 1.25rem;
         /* margin: auto; */
     }
-    .sidecard{
+
+    .sidecard {
         width: 100%;
     }
-    .sidecard2{
+
+    .sidecard2 {
         display: flex;
         flex-direction: column;
         justify-items: center;
@@ -1396,12 +1925,14 @@ nav ul li a {
         /* margin-top: 1.25rem; */
         margin: auto;
     }
-    .lsideb{
+
+    .lsideb {
         height: 15rem;
         width: 94%;
         margin: 10px auto;
 
-    } 
+    }
+
     .lsides1,
     .lsides2,
     .rsides1,
@@ -1411,9 +1942,11 @@ nav ul li a {
         width: 94%;
         margin: 10px auto;
     }
-    .lsidesb:hover{
+
+    .lsidesb:hover {
         transform: scale(1);
     }
+
     .lsides2:hover,
     .lsides1:hover,
     .rsides1:hover,
@@ -1421,66 +1954,79 @@ nav ul li a {
     .rsideb:hover {
         transform: scale(1);
     }
+
     .feature-card:hover .feature-content {
         transform: scale(1);
         opacity: 1;
         background-color: #dde3ee;
     }
-    
+
     .feature-card:hover {
         transform: scale(1);
         box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
     }
+
     .feature-heading h3 {
         font-size: 1.2rem;
     }
-    
-    .smart-contracts{
+
+    .smart-contracts {
         height: 8rem;
         width: auto;
     }
-    .defi{
+
+    .defi {
         height: 8rem;
         width: auto;
     }
-    .ethereum-2{
+
+    .ethereum-2 {
         height: 11rem;
         width: auto;
     }
-    .security{
+
+    .security {
         height: 10rem;
         width: auto;
     }
-    .dao{
+
+    .dao {
         height: 10rem;
         width: auto;
     }
-    .interoperability{
+
+    .interoperability {
         height: 10rem;
         width: auto;
     }
-    .steps{
+
+    .steps {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 4rem;
     }
-    .animated-line{
+
+    .animated-line {
         width: 100%;
     }
-    .step{
+
+    .step {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 10px;
         width: 100%;
     }
-    .step:nth-child(even){
+
+    .step:nth-child(even) {
         align-self: center;
     }
-    .step:nth-child(odd){
+
+    .step:nth-child(odd) {
         align-self: center;
     }
+
     .step img {
         max-width: 50px;
     }
@@ -1489,20 +2035,24 @@ nav ul li a {
         font-size: 1.2rem;
         width: 65%;
     }
-    .lineC{
+
+    .lineC {
         display: none;
     }
-    .how-our-site-works{
+
+    .how-our-site-works {
         padding: 0px;
     }
+
     .how-our-site-works .whead {
         /* text-align: justify; */
         font-size: 2.25rem;
     }
 
-    .para{
+    .para {
         width: 70%;
     }
+
     .how-our-site-works .subwhead {
         font-size: 1rem;
         margin: auto;
@@ -1513,58 +2063,162 @@ nav ul li a {
         width: 100%;
     }
 }
+
 @media (max-width: 400px) {
-    body{
+    body {
         overflow-x: hidden;
         width: 100%;
     }
-    .navbar{
-        width: 80%;
-        display: none;
+
+    .nav-btn {
+        /* visibility: visible; */
+        display: block;
+        opacity: 1;
+        top: 2rem;
+        right: 3rem;
+        position: absolute;
     }
-    .logo{
-        height: 2rem;
+
+    .navbar {
+        /* margin: 0px 10rem; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 13rem;
     }
-    .nav-button{
-        width: 20%;
+
+    .nav-items {
+        position: fixed;
+        top: 0;
+        left: -130vw;
+        height: 100%;
+        /* width: 100%; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        /* background-color: #1a3971; */
+        text-align: left;
+        transition: 1s;
+        border-radius: 0px;
+
     }
-    #connectButton{
+
+    .responsive_nav {
+        transform: translatex(130vw);
+        z-index: 2;
+    }
+
+    .nav-close-btn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .logo {
+        height: 2.75rem;
+        width: auto;
+    }
+
+    .nav-button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #connectButton {
+        /* width: 10%; */
+        margin: 0;
+    }
+
+    #connectButton1 {
         width: 10%;
     }
-    .hero{
+    .back-button {
+        background-color: #1a3971;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 20px;
+        position: absolute;
+        left: 2rem;
+    }
+    
+    .back-button:hover {
+        background-color: #CADCFC;
+        color: #1a3971;
+    }
+    .hero {
         height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .hero2{
+
+    .hero2 {
         height: 6rem;
         position: relative;
         z-index: 1;
     }
-    .down{
+
+    .down {
         height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .para{
+
+    .para {
         width: 70%;
     }
-    .he{
+
+    .he {
         display: flex;
         flex-direction: column;
         /* gap: 10px; */
         margin: 0px auto 0px auto;
     }
-    .h21{
+
+    .h21 {
         font-size: 2.5rem;
     }
-    .h22{
+
+    .h22 {
         font-size: 2.5rem;
     }
+    .ethereum {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .eth-para {
+        width: 70%;
+    }
+
+    .eth-he {
+        display: flex;
+        flex-direction: column;
+        /* gap: 10px; */
+        margin: 0px auto 0px auto;
+    }
+
+    .eth-h21 {
+        font-size: 2.5rem;
+    }
+
+    .eth-h22 {
+        font-size: 2.5rem;
+    }
+
     .hero h2 {
         font-size: 42px;
     }
@@ -1586,27 +2240,31 @@ nav ul li a {
         z-index: 1;
         transform: translate(0%, -56%);
     }
-    .downmain{
+
+    .ethdown {
         margin: 0px 2px 30px 0px;
     }
-    
-    .bigbox{
+
+    .bigbox {
         width: 100%;
         height: 200vh;
     }
-    .down p {
+
+    .ethereum p {
         font-size: 20px;
         width: 100%;
-        text-align:justify;
+        text-align: justify;
     }
-    .f1{
+
+    .f1 {
         font-size: 2.5rem;
     }
-    .f2{
+
+    .f2 {
         font-size: 2.5rem;
     }
-    
-    .cards1{
+
+    .cards1 {
         display: flex;
         flex-direction: column;
         justify-items: center;
@@ -1616,7 +2274,8 @@ nav ul li a {
         margin-top: 1.25rem;
         /* margin: auto; */
     }
-    .cards2{
+
+    .cards2 {
         display: flex;
         flex-direction: column;
         justify-items: center;
@@ -1626,10 +2285,12 @@ nav ul li a {
         margin-top: 1.25rem;
         /* margin: auto; */
     }
-    .sidecard{
+
+    .sidecard {
         width: 100%;
     }
-    .sidecard2{
+
+    .sidecard2 {
         display: flex;
         flex-direction: column;
         justify-items: center;
@@ -1639,12 +2300,14 @@ nav ul li a {
         /* margin-top: 1.25rem; */
         margin: auto;
     }
-    .lsideb{
+
+    .lsideb {
         height: 15rem;
         width: 94%;
         margin: 10px auto;
 
-    } 
+    }
+
     .lsides1,
     .lsides2,
     .rsides1,
@@ -1654,9 +2317,11 @@ nav ul li a {
         width: 94%;
         margin: 10px auto;
     }
-    .lsidesb:hover{
+
+    .lsidesb:hover {
         transform: scale(1);
     }
+
     .lsides2:hover,
     .lsides1:hover,
     .rsides1:hover,
@@ -1664,66 +2329,79 @@ nav ul li a {
     .rsideb:hover {
         transform: scale(1);
     }
+
     .feature-card:hover .feature-content {
         transform: scale(1);
         opacity: 1;
         background-color: #dde3ee;
     }
-    
+
     .feature-card:hover {
         transform: scale(1);
         box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
     }
+
     .feature-heading h3 {
         font-size: 1.2rem;
     }
-    
-    .smart-contracts{
+
+    .smart-contracts {
         height: 8rem;
         width: auto;
     }
-    .defi{
+
+    .defi {
         height: 8rem;
         width: auto;
     }
-    .ethereum-2{
+
+    .ethereum-2 {
         height: 11rem;
         width: auto;
     }
-    .security{
+
+    .security {
         height: 10rem;
         width: auto;
     }
-    .dao{
+
+    .dao {
         height: 10rem;
         width: auto;
     }
-    .interoperability{
+
+    .interoperability {
         height: 10rem;
         width: auto;
     }
-    .steps{
+
+    .steps {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 4rem;
     }
-    .animated-line{
+
+    .animated-line {
         width: 100%;
     }
-    .step{
+
+    .step {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 10px;
         width: 100%;
     }
-    .step:nth-child(even){
+
+    .step:nth-child(even) {
         align-self: center;
     }
-    .step:nth-child(odd){
+
+    .step:nth-child(odd) {
         align-self: center;
     }
+
     .step img {
         max-width: 50px;
     }
@@ -1732,12 +2410,15 @@ nav ul li a {
         font-size: 1.2rem;
         width: 65%;
     }
-    .lineC{
+
+    .lineC {
         display: none;
     }
-    .how-our-site-works{
+
+    .how-our-site-works {
         padding: 0px;
     }
+
     .how-our-site-works .whead {
         /* text-align: justify; */
         font-size: 2.25rem;
@@ -1755,52 +2436,150 @@ nav ul li a {
 }
 
 @media (max-width: 360px) {
-    body{
+    body {
         overflow-x: hidden;
         width: 100%;
     }
-    .navbar{
-        width: 80%;
-        display: none;
+
+    .nav-btn {
+        /* visibility: visible; */
+        display: block;
+        opacity: 1;
+        top: 2rem;
+        right: 3rem;
+        position: absolute;
     }
-    .logo{
-        height: 2rem;
+
+    .navbar {
+        /* margin: 0px 10rem; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 13rem;
     }
-    .nav-button{
-        width: 20%;
+
+    .nav-items {
+        position: fixed;
+        top: 0;
+        left: -130vw;
+        height: 100%;
+        /* width: 100%; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        /* background-color: #1a3971; */
+        text-align: left;
+        transition: 1s;
+        border-radius: 0px;
+
     }
-    #connectButton{
+
+    .responsive_nav {
+        transform: translatex(130vw);
+        z-index: 2;
+    }
+
+    .nav-close-btn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .logo {
+        height: 2.75rem;
+        width: auto;
+    }
+
+    .nav-button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #connectButton {
+        /* width: 10%; */
+        margin: 0;
+    }
+
+    #connectButton1 {
         width: 10%;
     }
-    .hero{
+    .back-button {
+        background-color: #1a3971;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 20px;
+        position: absolute;
+        left: 2rem;
+    }
+    
+    .back-button:hover {
+        background-color: #CADCFC;
+        color: #1a3971;
+    }
+    .hero {
         height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .hero1{
+
+    .hero1 {
         transform: translate(0%, -30%);
     }
-    .down{
+
+    .down {
         height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .he{
+
+    .he {
         display: flex;
         flex-direction: column;
         /* gap: 10px; */
         margin: 0px auto 0px auto;
     }
-    .h21{
+
+    .h21 {
         font-size: 2.5rem;
     }
-    .h22{
+
+    .h22 {
         font-size: 2.5rem;
     }
+    .ethereum{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .eth-he {
+        display: flex;
+        flex-direction: column;
+        /* gap: 10px; */
+        margin: 0px auto 0px auto;
+    }
+
+    .eth-h21 {
+        font-size: 2.5rem;
+    }
+
+    .eth-h22 {
+        font-size: 2.5rem;
+    }
+
     .hero h2 {
         font-size: 42px;
     }
@@ -1822,27 +2601,31 @@ nav ul li a {
         z-index: 1;
         transform: translate(0%, -56%);
     }
-    .downmain{
+
+    .ethdown {
         margin: 0px 2px 30px 0px;
     }
-    
-    .bigbox{
+
+    .bigbox {
         width: 100%;
         height: 211vh;
     }
-    .down p {
+
+    .ethereum p {
         font-size: 20px;
         width: 100%;
-        text-align:justify;
+        text-align: justify;
     }
-    .f1{
+
+    .f1 {
         font-size: 2.5rem;
     }
-    .f2{
+
+    .f2 {
         font-size: 2.5rem;
     }
-    
-    .cards1{
+
+    .cards1 {
         display: flex;
         flex-direction: column;
         justify-items: center;
@@ -1852,7 +2635,8 @@ nav ul li a {
         margin-top: 1.25rem;
         /* margin: auto; */
     }
-    .cards2{
+
+    .cards2 {
         display: flex;
         flex-direction: column;
         justify-items: center;
@@ -1862,10 +2646,12 @@ nav ul li a {
         margin-top: 1.25rem;
         /* margin: auto; */
     }
-    .sidecard{
+
+    .sidecard {
         width: 100%;
     }
-    .sidecard2{
+
+    .sidecard2 {
         display: flex;
         flex-direction: column;
         justify-items: center;
@@ -1875,12 +2661,14 @@ nav ul li a {
         /* margin-top: 1.25rem; */
         margin: auto;
     }
-    .lsideb{
+
+    .lsideb {
         height: 15rem;
         width: 94%;
         margin: 10px auto;
 
-    } 
+    }
+
     .lsides1,
     .lsides2,
     .rsides1,
@@ -1890,9 +2678,11 @@ nav ul li a {
         width: 94%;
         margin: 10px auto;
     }
-    .lsidesb:hover{
+
+    .lsidesb:hover {
         transform: scale(1);
     }
+
     .lsides2:hover,
     .lsides1:hover,
     .rsides1:hover,
@@ -1900,67 +2690,80 @@ nav ul li a {
     .rsideb:hover {
         transform: scale(1);
     }
+
     .feature-card:hover .feature-content {
         transform: scale(1);
         opacity: 1;
         background-color: #dde3ee;
         font-size: 1rem;
     }
-    
+
     .feature-card:hover {
         transform: scale(1);
         box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
     }
+
     .feature-heading h3 {
         font-size: 1rem;
     }
-    
-    .smart-contracts{
+
+    .smart-contracts {
         height: 8rem;
         width: auto;
     }
-    .defi{
+
+    .defi {
         height: 8rem;
         width: auto;
     }
-    .ethereum-2{
+
+    .ethereum-2 {
         height: 11rem;
         width: auto;
     }
-    .security{
+
+    .security {
         height: 10rem;
         width: auto;
     }
-    .dao{
+
+    .dao {
         height: 10rem;
         width: auto;
     }
-    .interoperability{
+
+    .interoperability {
         height: 10rem;
         width: auto;
     }
-    .steps{
+
+    .steps {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 4rem;
     }
-    .animated-line{
+
+    .animated-line {
         width: 100%;
     }
-    .step{
+
+    .step {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 10px;
         width: 100%;
     }
-    .step:nth-child(even){
+
+    .step:nth-child(even) {
         align-self: center;
     }
-    .step:nth-child(odd){
+
+    .step:nth-child(odd) {
         align-self: center;
     }
+
     .step img {
         max-width: 50px;
     }
@@ -1969,12 +2772,15 @@ nav ul li a {
         font-size: 1rem;
         width: 65%;
     }
-    .lineC{
+
+    .lineC {
         display: none;
     }
-    .how-our-site-works{
+
+    .how-our-site-works {
         padding: 0px;
     }
+
     .how-our-site-works .whead {
         /* text-align: justify; */
         font-size: 2.25rem;
@@ -1990,4 +2796,3 @@ nav ul li a {
         width: 100%;
     }
 }
-
