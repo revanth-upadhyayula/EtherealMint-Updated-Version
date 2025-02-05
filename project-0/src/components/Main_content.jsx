@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import {motion} from "framer-motion";
-
+import {Link,useNavigate} from "react-router-dom";
+import Mint from "./Mint";
 const Main_content = () => {
   const [scrollY, setScrollY] = useState(0);
 
@@ -12,6 +13,11 @@ const Main_content = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navigate = useNavigate();
+
+  const handleMint = () => {
+    navigate("/mint"); // Redirects to the Mint page
+  };
   const calculateTransform = (scrollPosition, type) => {
     const windowWidth = window.innerWidth;
 
@@ -23,15 +29,15 @@ const Main_content = () => {
 
     if (windowWidth <= 576) {
       stopPointX=0;
-      stopPointY = 370; // Adjust for smaller screens
-      gap = 67; // Adjust gap for smaller screens
+      stopPointY = 0; // Adjust for smaller screens
+      gap = 0; // Adjust gap for smaller screens
     } else if (windowWidth <= 768) {
       stopPointX=0;
-      stopPointY = 450; // Adjust for medium screens
+      stopPointY = -33; // Adjust for medium screens
       gap = 67; // Adjust gap for medium screens
     } else if (windowWidth <= 992) {
       stopPointX=0;
-      stopPointY = 450; // Adjust for larger screens
+      stopPointY = -33; // Adjust for larger screens
       gap = 67; // Adjust gap for larger screens
     }else if (windowWidth <= 1300) {
       stopPointY = 700; // Adjust for larger screens
@@ -40,14 +46,17 @@ const Main_content = () => {
 
     // Hero 2 calculation (hero2 image)
     if (type === "hero2") {
+      if (windowWidth <= 992)
+        return "none";
       const translateX = Math.max(-scrollPosition * 0.2, stopPointX); // Stop at -153.6
       const translateY = Math.min(scrollPosition * 0.9, stopPointY); // Stop at translateY of 668
       const scale = Math.min(1 + scrollPosition * 0.0002, stopScale); // Stop scale at 1.1536
       return `translate(${translateX}px, ${translateY}px) scale(${scale})`;
     }
-
+    
     // Hero 1 calculation (hero1 image)
     if (type === "hero1") {
+      if (windowWidth <= 992) return `translate(0px,0px scale(0))`;
       const translateX = Math.max(-scrollPosition * 0.2, stopPointX); // Stop at -153.6
       const translateY = Math.min(scrollPosition * 1 - 100 + gap, stopPointY); // Stop at translateY of 668
       const scale = Math.min(1 + scrollPosition * 0.0002, stopScale); // Stop scale at 1.1536
@@ -110,7 +119,7 @@ const Main_content = () => {
         </div>
         <motion.div initial={{opacity:0,y:300}} animate={{opacity:1,y:0}} transition={{duration: 2}} className="bm">
           <div className="hero-btn">
-            <button className="create">Mint Token</button>
+            <button onClick={handleMint} className="create">Mint Token</button>
             <button className="explore">Explore</button>
           </div>
         </motion.div>

@@ -9,14 +9,16 @@ import Features from './components/Features';
 import About from './components/About';
 import FAQ from './components/FAQ';
 import Site_work from './components/Site_work';
+import Mint from './components/Mint';
 
 const App = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
   // Pages where we want to hide Navigation and show Back Button
-  const hideNavPages = ["/ethereum", "/about", "/faq"];
+  const hideNavPages = ["/ethereum", "/about", "/faq", "/mint"];
   console.log(location.pathname)
+  // console.log(navigate.pathname)
   console.log(hideNavPages.includes(location.pathname));
 
   return (
@@ -35,6 +37,7 @@ const App = () => {
             <Features />
           </>
         } />
+        <Route path="/mint" element={<Mint />} />
         <Route path="/about" element={<About />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/" element={
