@@ -9,7 +9,7 @@ const Features = () => {
             <div className="bigbox">
                 <div className="f">
                     <motion.h2 initial={{opacity:0,y:-100}} whileInView={{opacity:1,y:0}} transition={{duration: 1,ease:"easeIn"}} viewport={{once:true}} className="f1">Features of</motion.h2>
-                    <motion.h2 initial={{opacity:0,y:100}} whileInView={{opacity:1,y:0}} transition={{duration: 1,delay:0.6,ease:"easeIn"}} viewport={{once:true,amount:1}} className="f2">Ethereum</motion.h2>
+                    <motion.h2 initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} transition={{duration: 2,delay:0.6,ease:"easeIn"}} viewport={{once:true}} className="f2">Ethereum</motion.h2>
                 </div>
 
                 <motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration: 1,ease:"easeIn"}} viewport={{once:true,amount:0.3}} className="cards1">

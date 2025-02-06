@@ -4,6 +4,11 @@
     cursor: url('./cursor.png'), auto;
 }
 
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
 body {
     overflow: auto;
     scrollbar-width: none;
@@ -33,7 +38,6 @@ nav {
     border-radius: 24px;
     background-color: #CADCFC;
     width: 40vw;
-    /* flex: 0 1 0%; */
     height: 64px;
     align-items: center;
     justify-content: center;
@@ -63,7 +67,6 @@ nav a:hover {
     border: none;
     outline: none;
     color: #1a3971;
-    /* visibility: hidden; */
     display: none;
     opacity: 0;
     font-size: 1.8rem;
@@ -92,7 +95,6 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     font-size: 15px;
     margin: 0 auto 2px 0;
     line-height: 26px;
@@ -100,18 +102,33 @@ nav a:hover {
     font-family: 'Bona Nova SC';
 }
 
-#connectButton:hover {
-    cursor: pointer;
-}
-
 #connectButton1:hover {
     background-color: rgb(202, 220, 252);
     color: #1a3971;
     cursor: pointer;
+    border: solid 0.2px #1a3971;
+    box-shadow: 5px 5px #1a3971;
+}
+#connectButton:hover {
+    cursor: pointer;
 }
 
+.blockchain{
+    text-decoration: none;
+    color: white;
+}
+.blockchain:hover{
+    background-color: #CADCFC;
+    color: #1a3971;
+    padding: 0px;
+}
+.blockchain1:hover{
+    background-color: #CADCFC;
+    color: #1a3971;
+    padding: 0px;
+}
 .li {
-    width: 8rem;
+    width: 11rem;
 }
 
 nav ul li a {
@@ -137,26 +154,21 @@ nav ul li a {
 .hero1,
 .hero2 {
     transition: transform 0.1s ease-out;
-    /* Smooth animations for rapid changes */
     transform-origin: center center;
 }
 
 .hero1 {
     height: 10rem;
-    /* Reduced size for hero1 */
     position: absolute;
     z-index: -1;
     transform: translate(0px, -100px) scale(1);
-    /* Smaller initial scale */
 }
 
 .hero2 {
     height: 15rem;
-    /* Slightly smaller height for better sync */
     position: absolute;
     z-index: 1;
     transform: translate(0px, 0px) scale(1);
-    /* Initial state for hero2 */
 }
 
 .hero {
@@ -169,10 +181,7 @@ nav ul li a {
 
 .main {
     position: relative;
-    /* Establishes a positioning context for its children */
     width: 100%;
-    /* Adjust as needed */
-    /* height: auto;  */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -220,8 +229,6 @@ nav ul li a {
     }
 }
 
-
-
 .hero-btn {
     display: flex;
     gap: 20px;
@@ -229,14 +236,11 @@ nav ul li a {
     margin: 0 20px;
 }
 
-.explore:hover {
-    background-color: #CADCFC;
-    color: #1a3971;
-}
-
 .create:hover {
     background-color: #CADCFC;
     color: #1a3971;
+    border: solid 0.2px #1a3971;
+    box-shadow: 5px 5px #1a3971;
 }
 
 .create {
@@ -244,10 +248,11 @@ nav ul li a {
     background-color: #1a3971;
     border-radius: 9px;
     font-size: 15px;
-    width: 7em;
+    width: 15rem;
     height: auto;
     color: white;
     cursor: pointer;
+    font-family: "Bona Nova SC";
 }
 
 .explore {
@@ -270,30 +275,26 @@ nav ul li a {
 }
 
 .hero2 {
-    /* width: 100%; Ensures the image spans the width of the container */
     height: 16rem;
-    /* Maintains the image's aspect ratio */
     position: relative;
-    /* Ensures the image stays in normal flow */
     z-index: 1;
-    /* Ensures the image is in front of the text */
 }
 
-.mint-main{
+.mint-main {
     height: 100vh;
     width: 100vw;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     background-color: #CADCFC;
-
 }
-.mint-hero{
+
+.mint-hero {
     position: absolute;
     top: 5rem;
     right: 3rem;
 }
-.metamask{
+
+.metamask {
     width: 100%;
     background-color: #1a3971;
     padding: 1rem;
@@ -304,14 +305,16 @@ nav ul li a {
     cursor: pointer;
     font-family: "Bona Nova SC";
 }
+
 .metamask:hover {
     background-color: white;
     color: #1a3971;
     cursor: pointer;
-    border:solid 0.2px #1a3971;
-    box-shadow:5px 5px #1a3971;
+    border: solid 0.2px #1a3971;
+    box-shadow: 5px 5px #1a3971;
 }
-.mint-area{
+
+.mint-area {
     background-color: white;
     border: solid 0.2px #1a3971;
     height: 80%;
@@ -323,7 +326,8 @@ nav ul li a {
     border-radius: 24px;
     box-shadow: 10px 10px #1a3971;
 }
-.form-box{
+
+.form-box {
     margin-top: 15%;
     height: 100%;
     width: 100%;
@@ -331,7 +335,8 @@ nav ul li a {
     justify-content: center;
     align-items: center;
 }
-.form-value{
+
+.form-value {
     height: 100%;
     width: 100%;
     display: flex;
@@ -340,35 +345,38 @@ nav ul li a {
     justify-content: center;
     align-items: center;
 }
-.mint-he{
+
+.mint-he {
     height: 26%;
 }
-.mint-h2{
-    font-family: "Kumar One",serif;
+
+.mint-h2 {
+    font-family: "Kumar One", serif;
     font-size: 2rem;
     color: #1a3971;
     margin-bottom: 0px;
 }
-.mint-p{
+
+.mint-p {
     font-family: "Bona Nova SC";
-    color:#7f94bb;
+    color: #7f94bb;
     margin-top: 0px;
     text-align: center;
 }
-.mint-form{
+
+.mint-form {
     height: 70%;
     width: 70%;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+
 .inputbox {
     position: relative;
-    /* margin: 30px 0 0 0; */
-    width: 100%; 
-    border-bottom: 2px solid #1a3971; /* Updated border color */
+    width: 100%;
+    border-bottom: 2px solid #1a3971;
 }
-
 
 .inputbox input {
     width: 100%;
@@ -378,7 +386,7 @@ nav ul li a {
     outline: none;
     font-size: 1.1rem;
     padding: 0 35px 0 5px;
-    color: #1a3971; /* Updated text color */
+    color: #1a3971;
 }
 
 .inputbox label {
@@ -391,12 +399,16 @@ nav ul li a {
     pointer-events: none;
     transition: .7s;
 }
-.mint-btn{
+
+.mint-btn {
     background-color: #1a3971;
     color: white;
     padding: 9px;
     border-radius: 9px;
+    border: none;
+    cursor: pointer;
 }
+
 .back-button {
     background-color: #1a3971;
     color: white;
@@ -411,9 +423,62 @@ nav ul li a {
 }
 
 .back-button:hover {
-    background-color: #CADCFC;
+    background-color: white;
     color: #1a3971;
-    border:solid 0.2px #1a3971;
+    border: solid 0.2px #1a3971;
+    box-shadow: 5px 5px #1a3971;
+}
+
+.faq-he {
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+}
+
+.faq-h2 {
+    font-family: "Kumar One", serif;
+    font-size: 2rem;
+    color: #1a3971;
+    margin-bottom: 0px;
+}
+
+.faq-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    font-family: Verdana;
+    width: 80%;
+    color: #1a3971;
+}
+
+.faq-question {
+    border: solid 0.2px #CADCFC;
+    background-color: white;
+    padding: 20px;
+    border-radius: 9px;
+    box-shadow: 7px 7px #CADCFC;
+    height: 9rem;
+}
+
+.faq-question h3 {
+    font-family: "Bona Nova SC";
+    margin-bottom: 10px;
+}
+
+.faq-question p {
+    margin: 0;
 }
 
 .down {
@@ -423,14 +488,13 @@ nav ul li a {
     align-items: center;
     justify-content: space-between;
     margin-top: 30px;
-
 }
+
 .downmain {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: auto;
-
 }
 
 .para {
@@ -438,12 +502,12 @@ nav ul li a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* width: 50vw; */
     text-align: justify;
 }
 
 .he {
-    margin: auto;
+    position: relative;
+    left: 2rem;
 }
 
 .h21 {
@@ -457,9 +521,7 @@ nav ul li a {
 }
 
 .down h2 {
-    /* font-family: "Titillium Web", serif; */
     font-weight: 725;
-    /* font-size: 50px; */
     font-style: normal;
     line-height: 0px;
     color: rgb(26, 57, 113);
@@ -467,15 +529,14 @@ nav ul li a {
 
 .down p {
     width: 70%;
-    /* display: flex; */
     justify-content: center;
     align-items: center;
     color: #1a3971;
     font-size: x-large;
     font-weight: 500;
     text-align: justify;
-    /* position: fixed; */
 }
+
 .ethereum {
     width: 100vw;
     height: 100vh;
@@ -483,7 +544,6 @@ nav ul li a {
     align-items: center;
     justify-content: space-between;
     margin-top: 30px;
-
 }
 
 .ethdown {
@@ -491,7 +551,6 @@ nav ul li a {
     justify-content: space-around;
     align-items: center;
     margin: auto;
-
 }
 
 .eth-para {
@@ -499,12 +558,13 @@ nav ul li a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* width: 50vw; */
     text-align: justify;
 }
 
 .eth-he {
     margin: auto;
+    position: relative;
+    left: 2rem;
 }
 
 .eth-h21 {
@@ -518,9 +578,7 @@ nav ul li a {
 }
 
 .ethereum h2 {
-    /* font-family: "Titillium Web", serif; */
     font-weight: 725;
-    /* font-size: 50px; */
     font-style: normal;
     line-height: 0px;
     color: rgb(26, 57, 113);
@@ -528,14 +586,12 @@ nav ul li a {
 
 .ethereum p {
     width: 70%;
-    /* display: flex; */
     justify-content: center;
     align-items: center;
     color: #1a3971;
     font-size: x-large;
     font-weight: 500;
     text-align: justify;
-    /* position: fixed; */
 }
 
 .features {
@@ -629,7 +685,6 @@ nav ul li a {
 .rsides1:hover,
 .rsides2:hover,
 .rsideb:hover {
-    /* transform: scale(1.05); */
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
     background-color: #CADCFC;
 }
@@ -652,7 +707,6 @@ nav ul li a {
 .f2 {
     font-family: "Kumar One", serif;
     font-size: 7rem;
-    /* Adjust as needed for the second part of the heading */
     margin-bottom: -3rem;
 }
 
@@ -669,7 +723,6 @@ nav ul li a {
     align-content: center;
     justify-content: center;
 }
-
 
 .feature-heading h3 {
     font-family: "Kumar one", serif;
@@ -729,25 +782,21 @@ nav ul li a {
 .ethereum-2 {
     width: 12rem;
     height: auto;
-
 }
 
 .security {
     width: 12rem;
     height: auto;
-
 }
 
 .dao {
     width: 12rem;
     height: auto;
-
 }
 
 .interoperability {
     width: 12rem;
     height: auto;
-
 }
 
 .work {
@@ -758,8 +807,6 @@ nav ul li a {
 .lineC {
     display: flex;
     justify-content: center;
-    /* width: 5vw;
-    height: 135vh; */
     position: absolute;
     margin-top: 12rem;
 }
@@ -768,34 +815,6 @@ nav ul li a {
     margin: 10rem 0 0 0;
     display: block;
 }
-
-/* .line{
-    position: absolute;
-    z-index: -1;
-    width: 5vw;
-    height: 135vh;
-} */
-/* Line animation container */
-/* .line {
-    position: relative;
-    width: 2px;
-    height: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-} */
-
-/* The vertical line */
-/* .line {
-    width: 2px;
-    height: 100%;
-    background-color: #000;
-    display: block;
-    transform-origin: top;
-    opacity: 1;
-} */
 
 .how-our-site-works {
     display: flex;
@@ -832,7 +851,7 @@ nav ul li a {
 .step {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -851,13 +870,6 @@ nav ul li a {
     align-self: flex-end;
 }
 
-.step img {
-    max-width: 100px;
-    height: auto;
-    margin: 0 20px;
-    flex-shrink: 0;
-}
-
 .step h3 {
     font-size: 1.5em;
     margin: 0 0 10px;
@@ -871,25 +883,22 @@ nav ul li a {
     transition: opacity 0.3s ease;
 }
 
-.step .step-content img {
+.image {
     width: 100px;
     height: 100px;
     margin-bottom: 10px;
 }
 
-/* Initially hide image and heading */
 .step .step-content img,
 .step .step-content h3 {
     opacity: 1;
 }
 
-/* Hover effect: Show the content (image, heading) and hide description */
 .step:hover .step-content img,
 .step:hover .step-content h3 {
     opacity: 0;
 }
 
-/* Paragraph content will be visible when hovered */
 .step .step-description {
     opacity: 0;
     position: absolute;
@@ -909,25 +918,51 @@ nav ul li a {
     font-family: "Bona Nova SC", serif;
 }
 
-/* Show paragraph when hovered */
 .step:hover .step-description {
     opacity: 1;
 }
 
-/* Adjust heading text and description position */
 .step h3 {
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
+.credits-he{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1a3971;
+    font-size: 2rem;
+    font-family: "Kumar One",serif;
+}
+.credits{
+    width: 50vw;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 60vh;
+    text-decoration: none;
+    color: #1a3971;
+    font-family: "Bona Nova SC";
+    font-size: 1.25rem;
+}
+.credits p{
+    width:50vw;
+    text-align: center;
+}
+.credits a{
+    text-decoration: none;
+}
+@media (max-width:1300px) {
+    .faq-he {
+        height: 20vh;
+    }
 
-/* Base Styles - already present */
+    .faq-question {
+        height: 25vh;
+    }
 
-/* @import url('https://fonts.googleapis.com/css2?family=Atomic+Age&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Kumar+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap'); */
-
-/* Add responsiveness below */
-
-@media (max-width: 1300px) {
     .back-button {
         background-color: #1a3971;
         color: white;
@@ -940,11 +975,12 @@ nav ul li a {
         position: absolute;
         left: 2rem;
     }
-    
+
     .back-button:hover {
         background-color: #CADCFC;
         color: #1a3971;
     }
+
     .hero h2 {
         font-size: 40px;
     }
@@ -965,6 +1001,7 @@ nav ul li a {
     .para {
         width: 60vw;
     }
+
     .eth-para {
         width: 60vw;
     }
@@ -973,10 +1010,6 @@ nav ul li a {
         flex-direction: column;
         height: auto;
         width: 80vw;
-    }
-
-    .step img {
-        max-width: 80px;
     }
 
     .navbar {
@@ -995,6 +1028,7 @@ nav ul li a {
     .h22 {
         font-size: 70px;
     }
+
     .eth-h21 {
         font-size: 45px;
     }
@@ -1013,6 +1047,7 @@ nav ul li a {
     .para {
         width: 50vw;
     }
+
     .eth-para {
         width: 50vw;
     }
@@ -1024,6 +1059,7 @@ nav ul li a {
 
     .step {
         width: 40%;
+        height: 25vh;
     }
 
     .animated-line {
@@ -1040,7 +1076,7 @@ nav ul li a {
     }
 }
 
-@media (max-width: 1092px) {
+@media (max-width:1092px) {
     .navbar {
         width: 92%;
         gap: 20px;
@@ -1054,6 +1090,15 @@ nav ul li a {
     #connectButton1 {
         padding: 9px;
     }
+
+    .faq-he {
+        height: 20vh;
+    }
+
+    .faq-question {
+        height: 25vh;
+    }
+
     .back-button {
         background-color: #1a3971;
         color: white;
@@ -1066,11 +1111,12 @@ nav ul li a {
         position: absolute;
         left: 2rem;
     }
-    
+
     .back-button:hover {
         background-color: #CADCFC;
         color: #1a3971;
     }
+
     .h21 {
         font-size: 45px;
     }
@@ -1078,6 +1124,7 @@ nav ul li a {
     .h22 {
         font-size: 70px;
     }
+
     .eth-h21 {
         font-size: 45px;
     }
@@ -1104,6 +1151,7 @@ nav ul li a {
 
     .step {
         width: 40%;
+        height: 25vh;
     }
 
     .animated-line {
@@ -1120,7 +1168,7 @@ nav ul li a {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width:992px) {
     body {
         overflow-x: hidden;
         width: 100%;
@@ -1128,12 +1176,8 @@ nav ul li a {
 
     .navbar {
         width: 90%;
-        /* display: none; */
         display: flex;
         gap: 0px;
-        /* margin-left: 0px ;
-        margin-right: 5px; */
-
     }
 
     .nav-items {
@@ -1144,7 +1188,6 @@ nav ul li a {
     }
 
     .logo {
-        /* height: rem; */
         width: auto;
         height: 2.75rem;
     }
@@ -1152,11 +1195,20 @@ nav ul li a {
     .nav-button {
         width: 6rem;
     }
-
+    .blockchain1{
+        text-decoration: none;
+        color: white;
+    }
+    .blockchain1:hover{
+        text-decoration: none;
+        color: white;
+        background-color: #1a3971;
+        width: 100%;
+    }
     #connectButton1 {
-        /* width: 10%; */
         padding: 3px;
     }
+
     .back-button {
         background-color: #1a3971;
         color: white;
@@ -1169,24 +1221,38 @@ nav ul li a {
         position: absolute;
         left: 2rem;
     }
-    
+
     .back-button:hover {
         background-color: #CADCFC;
         color: #1a3971;
     }
-    .mint-area{
+
+    .mint-area {
         height: 60%;
         width: 60%;
     }
-    .form-box{
+
+    .form-box {
         margin-top: 0px;
     }
+
     .hero {
         height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .faq-he {
+        height: 20vh;
+    }
+
+    .faq-question {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 12rem;
     }
 
     .down {
@@ -1200,8 +1266,8 @@ nav ul li a {
     .he {
         display: flex;
         flex-direction: column;
-        /* gap: 10px; */
         margin: 0px auto 0px auto;
+        left: 0;
     }
 
     .h21 {
@@ -1215,6 +1281,7 @@ nav ul li a {
     .hero h2 {
         font-size: 42px;
     }
+
     .ethereum {
         height: 80vh;
         display: flex;
@@ -1226,8 +1293,8 @@ nav ul li a {
     .eth-he {
         display: flex;
         flex-direction: column;
-        /* gap: 10px; */
         margin: 0px auto 0px auto;
+        left: 0;
     }
 
     .eth-h21 {
@@ -1237,6 +1304,7 @@ nav ul li a {
     .eth-h22 {
         font-size: 2.5rem;
     }
+
     .Token {
         font-size: 76px;
     }
@@ -1262,6 +1330,7 @@ nav ul li a {
     .para {
         width: 70vw;
     }
+
     .ethdown {
         margin: 0px 2px 30px 0px;
     }
@@ -1293,22 +1362,18 @@ nav ul li a {
         display: flex;
         flex-direction: column;
         justify-items: center;
-        /* height: 40%; */
         width: 100vw;
         align-items: center;
         margin-top: 1.25rem;
-        /* margin: auto; */
     }
 
     .cards2 {
         display: flex;
         flex-direction: column;
         justify-items: center;
-        /* height: 40%; */
         width: 100vw;
         align-items: center;
         margin-top: 1.25rem;
-        /* margin: auto; */
     }
 
     .sidecard {
@@ -1319,10 +1384,8 @@ nav ul li a {
         display: flex;
         flex-direction: column;
         justify-items: center;
-        /* height: 40%; */
         width: 100%;
         align-items: center;
-        /* margin-top: 1.25rem; */
         margin: auto;
     }
 
@@ -1330,7 +1393,6 @@ nav ul li a {
         height: 15rem;
         width: 94%;
         margin: 10px auto;
-
     }
 
     .lsides1,
@@ -1417,6 +1479,7 @@ nav ul li a {
         justify-content: center;
         padding: 10px;
         width: 100%;
+        height: 25vh;
     }
 
     .step:nth-child(even) {
@@ -1425,10 +1488,6 @@ nav ul li a {
 
     .step:nth-child(odd) {
         align-self: center;
-    }
-
-    .step img {
-        max-width: 50px;
     }
 
     .step .step-description {
@@ -1445,7 +1504,6 @@ nav ul li a {
     }
 
     .how-our-site-works .whead {
-        /* text-align: justify; */
         font-size: 2.25rem;
     }
 
@@ -1459,17 +1517,30 @@ nav ul li a {
     .features .puz {
         width: 100%;
     }
+    .credits-he{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #1a3971;
+        font-size: 1.5rem;
+        font-family: "Kumar One",serif;
+    }
+    .credits{
+        width: 80vw;
+        height: 60vh;
+    }
+    .credits p{
+        width: 80vw;
+    }
 }
 
-
-@media (max-width: 768px) {
+@media (max-width:768px) {
     body {
         overflow-x: hidden;
         width: 100%;
     }
 
     .nav-btn {
-        /* visibility: visible; */
         display: block;
         opacity: 1;
         top: 2rem;
@@ -1478,7 +1549,6 @@ nav ul li a {
     }
 
     .navbar {
-        /* margin: 0px 10rem; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1499,13 +1569,11 @@ nav ul li a {
         top: 0;
         left: -130vw;
         height: 100%;
-        /* width: 100%; */
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
-        /* background-color: #1a3971; */
         text-align: left;
         transition: 1s;
         border-radius: 0;
@@ -1533,15 +1601,47 @@ nav ul li a {
         justify-content: center;
         margin: 0;
     }
-
+    .blockchain1{
+        text-decoration: none;
+        color: white;
+    }
+    .blockchain1:hover{
+        text-decoration: none;
+        color: white;
+        background-color: #1a3971;
+        width: 100%;
+    }
     #connectButton {
         display: flex;
-        /* width: 10%; */
         margin: 0;
     }
 
     #connectButton1 {
         display: none;
+    }
+
+    .faq-he {
+        height: 30vh;
+    }
+
+    .faq-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        font-family: Verdana;
+        height: 100%;
+        width: 80%;
+        color: #1a3971;
+    }
+
+    .faq-question {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 25vh;
     }
 
     .back-button {
@@ -1556,15 +1656,17 @@ nav ul li a {
         position: absolute;
         left: 2rem;
     }
-    
+
     .back-button:hover {
         background-color: #CADCFC;
         color: #1a3971;
     }
-    .mint-area{
+
+    .mint-area {
         height: 60%;
         width: 80%;
     }
+
     .hero {
         height: 80vh;
         display: flex;
@@ -1584,8 +1686,8 @@ nav ul li a {
     .he {
         display: flex;
         flex-direction: column;
-        /* gap: 10px; */
         margin: 0px auto 0px auto;
+        left: 0;
     }
 
     .h21 {
@@ -1595,6 +1697,7 @@ nav ul li a {
     .h22 {
         font-size: 2.5rem;
     }
+
     .ethereum {
         height: 100vh;
         display: flex;
@@ -1606,8 +1709,8 @@ nav ul li a {
     .eth-he {
         display: flex;
         flex-direction: column;
-        /* gap: 10px; */
         margin: 0px auto 0px auto;
+        left: 0;
     }
 
     .eth-h21 {
@@ -1667,22 +1770,18 @@ nav ul li a {
         display: flex;
         flex-direction: column;
         justify-items: center;
-        /* height: 40%; */
         width: 100vw;
         align-items: center;
         margin-top: 1.25rem;
-        /* margin: auto; */
     }
 
     .cards2 {
         display: flex;
         flex-direction: column;
         justify-items: center;
-        /* height: 40%; */
         width: 100vw;
         align-items: center;
         margin-top: 1.25rem;
-        /* margin: auto; */
     }
 
     .sidecard {
@@ -1693,10 +1792,8 @@ nav ul li a {
         display: flex;
         flex-direction: column;
         justify-items: center;
-        /* height: 40%; */
         width: 100%;
         align-items: center;
-        /* margin-top: 1.25rem; */
         margin: auto;
     }
 
@@ -1704,7 +1801,6 @@ nav ul li a {
         height: 15rem;
         width: 94%;
         margin: 10px auto;
-
     }
 
     .lsides1,
@@ -1791,6 +1887,7 @@ nav ul li a {
         justify-content: center;
         padding: 10px;
         width: 100%;
+        height: 25vh;
     }
 
     .step:nth-child(even) {
@@ -1801,10 +1898,6 @@ nav ul li a {
         align-self: center;
     }
 
-    .step img {
-        max-width: 50px;
-    }
-
     .step .step-description {
         font-size: 1.2rem;
         width: 65%;
@@ -1813,15 +1906,16 @@ nav ul li a {
     .lineC {
         display: none;
     }
+
     .para {
         width: 100%;
     }
+
     .how-our-site-works {
         padding: 0px;
     }
 
     .how-our-site-works .whead {
-        /* text-align: justify; */
         font-size: 2.25rem;
     }
 
@@ -1837,14 +1931,13 @@ nav ul li a {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width:576px) {
     body {
         overflow-x: hidden;
         width: 100%;
     }
 
     .nav-btn {
-        /* visibility: visible; */
         display: block;
         opacity: 1;
         top: 2rem;
@@ -1865,17 +1958,14 @@ nav ul li a {
         top: 0;
         left: -130vw;
         height: 100%;
-        /* width: 100%; */
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
-        /* background-color: #1a3971; */
         text-align: left;
         transition: 1s;
         border-radius: 0px;
-
     }
 
     .responsive_nav {
@@ -1899,15 +1989,24 @@ nav ul li a {
         display: flex;
         justify-content: center;
     }
-
+    .blockchain1{
+        text-decoration: none;
+        color: white;
+    }
+    .blockchain1:hover{
+        text-decoration: none;
+        color: white;
+        background-color: #1a3971;
+        width: 100%;
+    }
     #connectButton {
-        /* width: 10%; */
         margin: 0;
     }
 
     #connectButton1 {
         width: 10%;
     }
+
     .back-button {
         background-color: #1a3971;
         color: white;
@@ -1920,17 +2019,41 @@ nav ul li a {
         position: absolute;
         left: 2rem;
     }
-    
+
     .back-button:hover {
         background-color: #CADCFC;
         color: #1a3971;
     }
+
     .hero {
         height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .faq-he {
+        height: 30vh;
+    }
+
+    .faq-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        justify-content: center;
+        align-items: start;
+        font-family: Verdana;
+        height: 100%;
+        width: 80%;
+        color: #1a3971;
+    }
+
+    .faq-question {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 25vh;
     }
 
     .down {
@@ -1944,8 +2067,8 @@ nav ul li a {
     .he {
         display: flex;
         flex-direction: column;
-        /* gap: 10px; */
         margin: 0px auto 0px auto;
+        left: 0;
     }
 
     .h21 {
@@ -1955,6 +2078,7 @@ nav ul li a {
     .h22 {
         font-size: 2.5rem;
     }
+
     .ethereum {
         height: 100vh;
         display: flex;
@@ -1966,8 +2090,8 @@ nav ul li a {
     .eth-he {
         display: flex;
         flex-direction: column;
-        /* gap: 10px; */
         margin: 0px auto 0px auto;
+        left: 0;
     }
 
     .eth-h21 {
@@ -1985,10 +2109,12 @@ nav ul li a {
     .Token {
         font-size: 76px;
     }
-    .mint-area{
+
+    .mint-area {
         height: 60%;
         width: 80%;
     }
+
     .hero1 {
         height: 4.7rem;
         position: relative;
@@ -2030,22 +2156,18 @@ nav ul li a {
         display: flex;
         flex-direction: column;
         justify-items: center;
-        /* height: 40%; */
         width: 100vw;
         align-items: center;
         margin-top: 1.25rem;
-        /* margin: auto; */
     }
 
     .cards2 {
         display: flex;
         flex-direction: column;
         justify-items: center;
-        /* height: 40%; */
         width: 100vw;
         align-items: center;
         margin-top: 1.25rem;
-        /* margin: auto; */
     }
 
     .sidecard {
@@ -2056,10 +2178,8 @@ nav ul li a {
         display: flex;
         flex-direction: column;
         justify-items: center;
-        /* height: 40%; */
         width: 100%;
         align-items: center;
-        /* margin-top: 1.25rem; */
         margin: auto;
     }
 
@@ -2067,7 +2187,6 @@ nav ul li a {
         height: 15rem;
         width: 94%;
         margin: 10px auto;
-
     }
 
     .lsides1,
@@ -2154,6 +2273,7 @@ nav ul li a {
         justify-content: center;
         padding: 10px;
         width: 100%;
+        height: 25vh;
     }
 
     .step:nth-child(even) {
@@ -2162,10 +2282,6 @@ nav ul li a {
 
     .step:nth-child(odd) {
         align-self: center;
-    }
-
-    .step img {
-        max-width: 50px;
     }
 
     .step .step-description {
@@ -2182,7 +2298,6 @@ nav ul li a {
     }
 
     .how-our-site-works .whead {
-        /* text-align: justify; */
         font-size: 2.25rem;
     }
 
@@ -2200,16 +2315,30 @@ nav ul li a {
     .features .puz {
         width: 100%;
     }
+    .credits-he{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #1a3971;
+        font-size: 1.5rem;
+        font-family: "Kumar One",serif;
+    }
+    .credits{
+        width: 80vw;
+        height: 100vh;
+    }
+    .credits p{
+        width: 80vw;
+    }
 }
 
-@media (max-width: 400px) {
+@media (max-width:400px) {
     body {
         overflow-x: hidden;
         width: 100%;
     }
 
     .nav-btn {
-        /* visibility: visible; */
         display: block;
         opacity: 1;
         top: 2rem;
@@ -2218,7 +2347,6 @@ nav ul li a {
     }
 
     .navbar {
-        /* margin: 0px 10rem; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -2230,17 +2358,14 @@ nav ul li a {
         top: 0;
         left: -130vw;
         height: 100%;
-        /* width: 100%; */
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
-        /* background-color: #1a3971; */
         text-align: left;
         transition: 1s;
         border-radius: 0px;
-
     }
 
     .responsive_nav {
@@ -2266,12 +2391,21 @@ nav ul li a {
     }
 
     #connectButton {
-        /* width: 10%; */
         margin: 0;
     }
 
     #connectButton1 {
         width: 10%;
+    }
+    .blockchain1{
+        text-decoration: none;
+        color: white;
+    }
+    .blockchain1:hover{
+        text-decoration: none;
+        color: white;
+        background-color: #1a3971;
+        width: 100%;
     }
     .back-button {
         background-color: #1a3971;
@@ -2285,11 +2419,12 @@ nav ul li a {
         position: absolute;
         left: 2rem;
     }
-    
+
     .back-button:hover {
         background-color: #CADCFC;
         color: #1a3971;
     }
+
     .hero {
         height: 80vh;
         display: flex;
@@ -2319,8 +2454,8 @@ nav ul li a {
     .he {
         display: flex;
         flex-direction: column;
-        /* gap: 10px; */
         margin: 0px auto 0px auto;
+        left: 0;
     }
 
     .h21 {
@@ -2330,6 +2465,7 @@ nav ul li a {
     .h22 {
         font-size: 2.5rem;
     }
+
     .ethereum {
         height: 100vh;
         display: flex;
@@ -2345,8 +2481,8 @@ nav ul li a {
     .eth-he {
         display: flex;
         flex-direction: column;
-        /* gap: 10px; */
         margin: 0px auto 0px auto;
+        left: 0;
     }
 
     .eth-h21 {
@@ -2406,22 +2542,18 @@ nav ul li a {
         display: flex;
         flex-direction: column;
         justify-items: center;
-        /* height: 40%; */
         width: 100vw;
         align-items: center;
         margin-top: 1.25rem;
-        /* margin: auto; */
     }
 
     .cards2 {
         display: flex;
         flex-direction: column;
         justify-items: center;
-        /* height: 40%; */
         width: 100vw;
         align-items: center;
         margin-top: 1.25rem;
-        /* margin: auto; */
     }
 
     .sidecard {
@@ -2432,10 +2564,8 @@ nav ul li a {
         display: flex;
         flex-direction: column;
         justify-items: center;
-        /* height: 40%; */
         width: 100%;
         align-items: center;
-        /* margin-top: 1.25rem; */
         margin: auto;
     }
 
@@ -2443,7 +2573,6 @@ nav ul li a {
         height: 15rem;
         width: 94%;
         margin: 10px auto;
-
     }
 
     .lsides1,
@@ -2530,6 +2659,7 @@ nav ul li a {
         justify-content: center;
         padding: 10px;
         width: 100%;
+        height: 25vh;
     }
 
     .step:nth-child(even) {
@@ -2538,10 +2668,6 @@ nav ul li a {
 
     .step:nth-child(odd) {
         align-self: center;
-    }
-
-    .step img {
-        max-width: 50px;
     }
 
     .step .step-description {
@@ -2558,7 +2684,6 @@ nav ul li a {
     }
 
     .how-our-site-works .whead {
-        /* text-align: justify; */
         font-size: 2.25rem;
     }
 
@@ -2572,16 +2697,30 @@ nav ul li a {
     .features .puz {
         width: 100%;
     }
+    .credits-he{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #1a3971;
+        font-size: 1.5rem;
+        font-family: "Kumar One",serif;
+    }
+    .credits{
+        width: 80vw;
+        height: 100vh;
+    }
+    .credits p{
+        width: 80vw;
+    }
 }
 
-@media (max-width: 360px) {
+@media (max-width:360px) {
     body {
         overflow-x: hidden;
         width: 100%;
     }
 
     .nav-btn {
-        /* visibility: visible; */
         display: block;
         opacity: 1;
         top: 2rem;
@@ -2590,7 +2729,6 @@ nav ul li a {
     }
 
     .navbar {
-        /* margin: 0px 10rem; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -2602,17 +2740,14 @@ nav ul li a {
         top: 0;
         left: -130vw;
         height: 100%;
-        /* width: 100%; */
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
-        /* background-color: #1a3971; */
         text-align: left;
         transition: 1s;
         border-radius: 0px;
-
     }
 
     .responsive_nav {
@@ -2630,7 +2765,16 @@ nav ul li a {
         height: 2.75rem;
         width: auto;
     }
-
+    .blockchain1{
+        text-decoration: none;
+        color: white;
+    }
+    .blockchain1:hover{
+        text-decoration: none;
+        color: white;
+        background-color: #1a3971;
+        width: 100%;
+    }
     .nav-button {
         width: 100%;
         display: flex;
@@ -2638,13 +2782,13 @@ nav ul li a {
     }
 
     #connectButton {
-        /* width: 10%; */
         margin: 0;
     }
 
     #connectButton1 {
         width: 10%;
     }
+
     .back-button {
         background-color: #1a3971;
         color: white;
@@ -2657,11 +2801,12 @@ nav ul li a {
         position: absolute;
         left: 2rem;
     }
-    
+
     .back-button:hover {
         background-color: #CADCFC;
         color: #1a3971;
     }
+
     .hero {
         height: 80vh;
         display: flex;
@@ -2685,8 +2830,8 @@ nav ul li a {
     .he {
         display: flex;
         flex-direction: column;
-        /* gap: 10px; */
         margin: 0px auto 0px auto;
+        left: 0;
     }
 
     .h21 {
@@ -2696,7 +2841,8 @@ nav ul li a {
     .h22 {
         font-size: 2.5rem;
     }
-    .ethereum{
+
+    .ethereum {
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -2707,8 +2853,8 @@ nav ul li a {
     .eth-he {
         display: flex;
         flex-direction: column;
-        /* gap: 10px; */
         margin: 0px auto 0px auto;
+        left: 0;
     }
 
     .eth-h21 {
@@ -2768,22 +2914,18 @@ nav ul li a {
         display: flex;
         flex-direction: column;
         justify-items: center;
-        /* height: 40%; */
         width: 100vw;
         align-items: center;
         margin-top: 1.25rem;
-        /* margin: auto; */
     }
 
     .cards2 {
         display: flex;
         flex-direction: column;
         justify-items: center;
-        /* height: 40%; */
         width: 100vw;
         align-items: center;
         margin-top: 1.25rem;
-        /* margin: auto; */
     }
 
     .sidecard {
@@ -2794,10 +2936,8 @@ nav ul li a {
         display: flex;
         flex-direction: column;
         justify-items: center;
-        /* height: 40%; */
         width: 100%;
         align-items: center;
-        /* margin-top: 1.25rem; */
         margin: auto;
     }
 
@@ -2805,7 +2945,6 @@ nav ul li a {
         height: 15rem;
         width: 94%;
         margin: 10px auto;
-
     }
 
     .lsides1,
@@ -2893,6 +3032,7 @@ nav ul li a {
         justify-content: center;
         padding: 10px;
         width: 100%;
+        height: 25vh;
     }
 
     .step:nth-child(even) {
@@ -2901,10 +3041,6 @@ nav ul li a {
 
     .step:nth-child(odd) {
         align-self: center;
-    }
-
-    .step img {
-        max-width: 50px;
     }
 
     .step .step-description {
@@ -2921,7 +3057,6 @@ nav ul li a {
     }
 
     .how-our-site-works .whead {
-        /* text-align: justify; */
         font-size: 2.25rem;
     }
 
@@ -2934,5 +3069,20 @@ nav ul li a {
 
     .features .puz {
         width: 100%;
+    }
+    .credits-he{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #1a3971;
+        font-size: 1.5rem;
+        font-family: "Kumar One",serif;
+    }
+    .credits{
+        width: 80vw;
+        height: 100vh;
+    }
+    .credits p{
+        width: 80vw;
     }
 }

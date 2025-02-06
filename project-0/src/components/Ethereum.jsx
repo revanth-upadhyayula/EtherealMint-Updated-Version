@@ -27,4 +27,4 @@ const Ethereum = () => {
     )
 }
 
-export default Ethereum;
+export default Ethereum; 

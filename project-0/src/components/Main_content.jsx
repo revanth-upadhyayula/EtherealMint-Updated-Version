@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {motion} from "framer-motion";
-import {Link,useNavigate} from "react-router-dom";
-import Mint from "./Mint";
+import {useNavigate} from "react-router-dom";
+
 const Main_content = () => {
   const [scrollY, setScrollY] = useState(0);
 
@@ -120,7 +120,7 @@ const Main_content = () => {
         <motion.div initial={{opacity:0,y:300}} animate={{opacity:1,y:0}} transition={{duration: 2}} className="bm">
           <div className="hero-btn">
             <button onClick={handleMint} className="create">Mint Token</button>
-            <button className="explore">Explore</button>
+            {/* <button className="explore">Explore</button> */}
           </div>
         </motion.div>
       </section>

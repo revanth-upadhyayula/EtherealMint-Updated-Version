@@ -14,9 +14,9 @@ const Down_content = () => {
                         <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 1, ease: "easeOut" }} viewport={{ once: true }}>
                             A Token is a representation of money, time, services, shares in a company, a virtual pet, anything in the blockchain. By representing things as tokens, we can allow smart contracts to interact with them, exchange them, create or destroy them.
                         </motion.p>
-                        <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 1.5, ease: "easeOut" }} viewport={{ once: true }}>
+                        <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 1.15, ease: "easeOut" }} viewport={{ once: true }}>
                             ERC-20, or Ethereum Request for Comment 20, is a technical standard used for issuing and implementing assets on the{" "}
-                            <Link to="/ethereum" style={{ color: "blue", textDecoration: "underline" }}>Ethereum</Link> blockchain.
+                            <Link to="/ethereum" style={{ color: "#1a3971", textDecoration:"underline" }}>Ethereum</Link> blockchain.
                         </motion.p>
                     </div>
                 </div>

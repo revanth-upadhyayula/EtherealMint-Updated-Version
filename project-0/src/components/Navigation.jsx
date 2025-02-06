@@ -22,14 +22,14 @@ const Navigation = () => {
             <li className='li'><Link to='/faq'>FAQ's</Link></li>
             <li className='li'><Link to='/ethereum'>Ethereum</Link></li>
             {/* <li className='li'><a href='https://docs.openzeppelin.com/contracts/5.x/erc20'>Guide</a></li> */}
-            <li className='li'><a href='#'>BlockChain</a></li>
+            {/* <li className='li'><a href='#'>BlockChain</a></li> */}
             {/* <li className='li'><a href='#'></a></li> */}
             {/* <li className='li'><a href="#" className="social-icon"><i class='bx bxl-instagram'></i></a></li>
             <li className='li'><a href="#" className="social-icon"><i class='bx bxl-twitter'></i></a></li> */}
-            <div className="nav-button"><button id="connectButton">Connect to MetaMask</button></div>
+            <div className="nav-button"><button id="connectButton"><a className="blockchain1" href="https://www.ibm.com/think/topics/blockchain" target="_blank" rel="noopener noreferrer">Explore BlockChain</a></button></div>
             <button className="nav-btn nav-close-btn" onClick={showNav}><FaTimes /></button>
           </ul>
-          <div className="nav-button"><button id="connectButton1">Connect to MetaMask</button></div>
+          <div className="nav-button"><button id="connectButton1"><a className="blockchain" href="https://www.ibm.com/think/topics/blockchain" target="_blank" rel="noopener noreferrer">Explore BlockChain</a></button></div>
           <button className="nav-btn" onClick={showNav}><FaBars /></button>
     </motion.nav>
   );

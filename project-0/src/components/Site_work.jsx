@@ -23,7 +23,7 @@ const SiteWork = () => {
             { strokeDashoffset: pathLength },
             {
                 strokeDashoffset: 0,
-                duration: 3,
+                duration: 6,
                 ease: "none",
                 scrollTrigger: {
                     trigger: containerRef.current, // Attach ScrollTrigger to the section
@@ -44,8 +44,8 @@ const SiteWork = () => {
 
     return (
         <section ref={containerRef} className="how-our-site-works">
-            <motion.h2 initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration: 1,ease:"easeIn"}} viewport={{once:true}} className="whead">How Our Site Works</motion.h2>
-            <motion.p initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration: 1,delay:0.2,ease:"easeIn"}} viewport={{once:true}} className="subwhead">Follow these steps to interact with the ERC20 DAPP platform.</motion.p>
+            <motion.h2 initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration: 1,ease:"easeIn"}} className="whead">How Our Site Works</motion.h2>
+            <motion.p initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration: 1,delay:0.2,ease:"easeIn"}} className="subwhead">Follow these steps to interact with the ERC20 DAPP platform.</motion.p>
 
             <div className="lineC">
                 {/* SVG for the animated line */}
@@ -72,12 +72,12 @@ const SiteWork = () => {
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1, scale: 1.25 }}
-                    transition={{ duration: 0.6,delay:0.1 }}
-                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.6,delay:0.7 }}
+                    viewport={{ once: true, amount: 1 }}
                     className="step"
                 >
                     <div className="step-content">
-                        <img src="verified.png" alt="Step 1" />
+                        <img className="image" src="verified.png" alt="Step 1" />
                         <h3>Step 1: Verify Organization</h3>
                     </div>
                     <p className="step-description">
@@ -89,13 +89,13 @@ const SiteWork = () => {
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1, scale: 1.25 }}
-                    transition={{ duration: 0.6,delay:0.1 }}
+                    transition={{ duration: 0.6,delay:0.7 }}
                     viewport={{ once: true, amount: 0.5 }}
                     className="step"
                 >
                     <div className="step-content">
-                        <img src="token.png" alt="Step 2" />
-                        <h3>Step 2: Create Token</h3>
+                        <img className="image" src="token.png" alt="Step 2" />
+                        <h3>Step 2: Create Test Token</h3>
                     </div>
                     <p className="step-description">
                         Once verified, the organization can create their own test token by providing
@@ -107,12 +107,12 @@ const SiteWork = () => {
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1, scale: 1.25 }}
-                    transition={{ duration: 0.6,delay:0.1 }}
+                    transition={{ duration: 0.6,delay:0.7 }}
                     viewport={{ once: true, amount: 0.5 }}
                     className="step"
                 >
                     <div className="step-content">
-                        <img src="smart-contracts.png" alt="Step 3" />
+                        <img className="image" src="smart-contracts.png" alt="Step 3" />
                         <h3>Step 3: Smart Contract Request</h3>
                     </div>
                     <p className="step-description">
@@ -125,12 +125,12 @@ const SiteWork = () => {
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1, scale: 1.25 }}
-                    transition={{ duration: 0.6,delay:0.1 }}
+                    transition={{ duration: 0.6,delay:0.7 }}
                     viewport={{ once: true, amount: 0.5 }}
                     className="step"
                 >
                     <div className="step-content">
-                        <img src="transfer.png" alt="Step 4" />
+                        <img className="image" src="transfer.png" alt="Step 4" />
                         <h3>Step 4: Transfer Token</h3>
                     </div>
                     <p className="step-description">
@@ -143,12 +143,12 @@ const SiteWork = () => {
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1, scale: 1.25 }}
-                    transition={{ duration: 0.6,delay:0.1 }}
+                    transition={{ duration: 0.6,delay:0.7 }}
                     viewport={{ once: true, amount: 0.5 }}
                     className="step"
                 >
                     <div className="step-content">
-                        <img src="verification.png" alt="Step 5" />
+                        <img className="image" src="verification.png" alt="Step 5" />
                         <h3>Step 5: Verification and Updates</h3>
                     </div>
                     <p className="step-description">
