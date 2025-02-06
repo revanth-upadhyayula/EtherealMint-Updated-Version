@@ -22,8 +22,8 @@ const Mint = () => {
   const [PAN, setPAN] = useState("");
   const [error, setError] = useState("");
 
-  const factoryAddress = process.env.factoryAddress;
-  const factoryABI = JSON.parse(process.env.factoryABI);
+  const factoryAddress = process.env.REACT_APP_FACTORY_ADDRESS;
+  const factoryABI = JSON.parse(process.env.REACT_APP_FACTORY_ABI);
 
 
   const handleVerify = (event) => {
