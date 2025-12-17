@@ -1,6 +1,6 @@
 import {motion} from "framer-motion";
-import {useEffect} from "react";
-// import Features from "./Features";
+import {useState, useEffect} from "react";
+import Features from "./Features";
 const Ethereum = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
